@@ -13,6 +13,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	$Area2D/CollisionShape2D.disabled = ! Input.is_action_pressed("ui_accept")
 	pass
 	
 func _physics_process(delta):

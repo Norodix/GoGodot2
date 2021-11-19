@@ -4,7 +4,7 @@ extends Node2D
 var width = 1024
 var height = 600
 var v = 400 #starting velocity
-var ballCount = 1
+var ballCount = 10
 var balls = []
 
 
