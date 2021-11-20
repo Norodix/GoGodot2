@@ -33,6 +33,7 @@ func _process(delta):
 	
 func _unhandled_input(event):
 	if (event is InputEventMouseButton):
+		#TODO only handle all the following things for left click
 		if event.is_pressed():
 			print("pressed")
 			#get source if under mouse, set source
