@@ -1,8 +1,10 @@
 extends KinematicBody2D
 
-
+#Current energy level of the node
 export(float, 0, 1) var E = 0 #Energy
+#Maximum energy level of the node
 export(float, 1, 10) var maxE = 1
+#Rising of the node in pixels/E
 export(int, 0, 600) var Rising = 64
 var rootPos : Vector2
 

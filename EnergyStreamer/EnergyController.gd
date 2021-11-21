@@ -2,7 +2,7 @@ extends Node2D
 
 var source : Node2D
 var sink : Node2D
-var transferSpeed = 0.25
+var transferSpeed = 0.35
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
