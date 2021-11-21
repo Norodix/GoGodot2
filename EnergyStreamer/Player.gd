@@ -21,6 +21,16 @@ func _ready():
 	jump_speed = - sqrt(2*gravity*jump_height) #mgh = mv^2 / 2 => v = sqrt(2*g*h)
 	pass
 
+func field_effect():
+	#Get overlapping fields
+	var effect = Vector2.ZERO
+	var fields = $FieldDetector.get_overlapping_areas()
+	
+	for field in fields:
+		effect += field.FieldEffect
+	
+	return effect
+
 func _physics_process(delta):
 	var right = Input.is_action_pressed("ui_right")
 	var left = Input.is_action_pressed("ui_left")
@@ -52,4 +62,7 @@ func _physics_process(delta):
 		if ground:
 			velocity.y = jump_speed
 			snap = Vector2.ZERO
+	
+	velocity += field_effect() * delta
+	
 	velocity = move_and_slide_with_snap(velocity, snap, Vector2.UP)

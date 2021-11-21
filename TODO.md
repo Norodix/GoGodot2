@@ -6,6 +6,7 @@
         - [x] Common property energy
         - [ ] Custom behaviour, fire size, boiling stream etc.
         - [ ] Create animations
+        - [ ] Visualize current energy level on scale
         - [ ] Nodes
             - [ ] Cauldron
             - [x] Fire
@@ -24,6 +25,11 @@
     - [ ] Design good levels
     - [ ] Sound design
     - [ ] Implement Level selector, menu and level end target
+
+## Level ideas
+    - Vertically narrow corridor, many horizontal oscillators, have to set one by one
+    - Cauldron lift up/ basic platform lift up
+    - Need to find place to dump energy instead of sourcing it
 
 ## Other/Optional
 
