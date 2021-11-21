@@ -8,7 +8,7 @@
         - [ ] Create animations
         - [ ] Visualize current energy level on scale
         - [ ] Nodes
-            - [ ] Cauldron
+            - [x] Cauldron
             - [x] Fire
             - [x] Rising platform
             - [x] Horizontally bouncing/moving platform/springing
@@ -25,11 +25,15 @@
     - [ ] Design good levels
     - [ ] Sound design
     - [ ] Implement Level selector, menu and level end target
+    - [ ] Add hurt zones where the player can die on the level
+    - [ ] Maybe fire hurts the player?
 
 ## Level ideas
     - Vertically narrow corridor, many horizontal oscillators, have to set one by one
     - Cauldron lift up/ basic platform lift up
     - Need to find place to dump energy instead of sourcing it
+    - Oscillating platform opens up horizontal passage / drop down
+    - Source can only be one that the player is touching?
 
 ## Other/Optional
 
