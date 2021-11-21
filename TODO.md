@@ -12,6 +12,7 @@
             - Rising platform
             - Horizontally bouncing/moving platform/springing
             - Lamp
+            - Negative energy/direct energy out from water to freeze it
     - Create connection handler
         - Detect energy nodes based on collision layer and energy property
         - Handle unhandled inputs in all scenes

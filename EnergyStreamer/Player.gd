@@ -19,9 +19,7 @@ func _ready():
 	acceleration = max_speed / acceleration_time
 	deceleration = max_speed / deceleration_time
 	jump_speed = - sqrt(2*gravity*jump_height) #mgh = mv^2 / 2 => v = sqrt(2*g*h)
-	print(jump_speed)
-	pass # Replace with function body.
-
+	pass
 
 func _physics_process(delta):
 	var right = Input.is_action_pressed("ui_right")

@@ -1,10 +1,12 @@
 extends Node2D
 
-var source
-var sink
+var source : Node2D
+var sink : Node2D
+var transferSpeed = 0.25
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Line2D.set_as_toplevel(true)
 	pass # Replace with function body.
 
 	
@@ -20,16 +22,32 @@ func findEnergyStorage(mousePos : Vector2):
 func _process(delta):
 	if (source and not sink):
 		$Line2D.visible = true
-		$Line2D.points[0] = source.position
+		$Line2D.points[0] = source.global_position
 		$Line2D.points[1] = get_global_mouse_position()
 	elif (source and sink):
 		$Line2D.visible = true
-		$Line2D.points[0] = source.position
-		$Line2D.points[1] = sink.position
+		$Line2D.points[0] = source.global_position
+		$Line2D.points[1] = sink.global_position
 	else:
 		$Line2D.visible = false
-		
+	
+	transferEnergy(delta)
 	pass	
+	
+func transferEnergy(delta):
+	if !(source && sink): 
+		return
+	if ( (source.get("E") == null) || (sink.get("E") == null) ):
+		print("NON ENERGY STORES CONNECTED")
+		return
+	#Calculate max transferable energy between the two nodes
+	var maxTransfer = min(1-sink.E, source.E)
+	var transferE = min(maxTransfer, transferSpeed*delta)
+	print("TransferE: ", transferE)
+	sink.E += transferE
+	source.E -= transferE
+	
+	
 	
 func _unhandled_input(event):
 	if (event is InputEventMouseButton):
