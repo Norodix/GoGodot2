@@ -112,4 +112,3 @@ maxE = 2.0
 
 [node name="BouncingPlatform" parent="." instance=ExtResource( 5 )]
 position = Vector2( 312, 176 )
-BounceDirection = 0

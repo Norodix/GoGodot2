@@ -46,7 +46,10 @@ func _physics_process(delta):
 		velocity.x = sign(velocity.x) * max_speed
 
 	velocity.y += gravity * delta
-	velocity = move_and_slide(velocity, Vector2.UP)
+	var snap = Vector2.DOWN * 64 if is_on_floor() else Vector2.ZERO
+	#velocity = move_and_slide(velocity, Vector2.UP)
 	if Input.is_action_pressed("jump"):
 		if ground:
 			velocity.y = jump_speed
+			snap = Vector2.ZERO
+	velocity = move_and_slide_with_snap(velocity, snap, Vector2.UP)

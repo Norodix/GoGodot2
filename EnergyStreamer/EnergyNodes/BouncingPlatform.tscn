@@ -8,8 +8,9 @@ extents = Vector2( 96, 32 )
 
 [node name="BouncingPlatform" type="KinematicBody2D"]
 collision_layer = 3
+motion/sync_to_physics = true
 script = ExtResource( 1 )
-Freqency = 0.3
+BounceDirection = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

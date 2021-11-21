@@ -20,7 +20,7 @@ func _ready():
 	pass # Replace with function body.
 
 
-func _process(delta):
+func _physics_process(delta):
 	phase += delta*Freqency
 	phase -= int(phase)
 	if (BounceDirection == 0):
