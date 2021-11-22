@@ -49,6 +49,8 @@
         - Landing
         - Magic energy transfer effect, (maybe something sparkly, have to sync with visual effect)
         - Success sound on flag pickup
+    
+    The inspiration character is a lute player, if we could sneak a little bit of lute sound in somewhere that would be a cool small addition
 
 ## Other/Optional
 
