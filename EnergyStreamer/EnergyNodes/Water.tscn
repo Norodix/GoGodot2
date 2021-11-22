@@ -1,18 +1,22 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://EnergyNodes/Water.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/platformPack_tilesheet.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24, 261 )
+extents = Vector2( 24, 184.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32, 32 )
 
 [node name="Water" type="Area2D"]
 collision_layer = 6
 collision_mask = 0
 script = ExtResource( 1 )
+Height = 369
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -251 )
+position = Vector2( 0, -184.5 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -20,3 +24,6 @@ texture = ExtResource( 2 )
 hframes = 14
 vframes = 7
 frame = 4
+
+[node name="BaseShape" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
