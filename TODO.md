@@ -27,6 +27,7 @@
     - [ ] Implement Level selector, menu and level end target
     - [ ] Add hurt zones where the player can die on the level
     - [ ] Maybe fire hurts the player?
+    - [ ] Get overlapping areas for connection: if multiple use the closest
 
 ## Level ideas
     - Vertically narrow corridor, many horizontal oscillators, have to set one by one
@@ -34,6 +35,20 @@
     - Need to find place to dump energy instead of sourcing it
     - Oscillating platform opens up horizontal passage / drop down
     - Source can only be one that the player is touching?
+    - Moving platform combined with uplift, cancelling each other
+
+## Sound design
+    - Background music
+    - Energy nodes' sfx
+        - Fire crackling
+        - Water boiling bubbling
+        - Platform moving, have to sync with platform material
+    - Character sfx
+        - Running
+        - Jumping
+        - Landing
+        - Magic energy transfer effect, (maybe something sparkly, have to sync with visual effect)
+        - Success sound on flag pickup
 
 ## Other/Optional
 
