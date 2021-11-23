@@ -24,7 +24,18 @@
     - [ ] Implement tilemap for levels https://kenney.nl/assets/abstract-platformer
     - [ ] Design good levels
     - [ ] Sound design
-    - [ ] Implement Level selector, menu and level end target
+    - [ ] Implement Level selector, menu and level end target, pause
+        - Game node as static never changing root -> script adds/frees scenes to active level canvas layer on signal "level END"
+            - World background
+            - Pause menu -> https://www.youtube.com/watch?v=Jf7F3JhY9Fg
+                - Resume
+                - Restart
+                - Select level
+                - Exit
+            - Active level / menu scene -> This managed by the game node script
+        End of level flag/sth sends signal to Game node
+        Active level is stored (with index) and handled by the game node (with set level and get level functions)
+        Gamenode has clearLevels function to make sure there is no two levels active at the same time
     - [ ] Add hurt zones where the player can die on the level
     - [ ] Maybe fire hurts the player?
     - [ ] Get overlapping areas for connection: if multiple use the closest
