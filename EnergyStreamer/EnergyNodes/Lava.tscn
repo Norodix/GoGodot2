@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://EnergyNodes/Lava.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/platformPack_tilesheet.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 32, 32 )
+
+[node name="Lava" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1.2, 0, 0, 1 )
+texture = ExtResource( 2 )
+hframes = 14
+vframes = 7
+frame = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 2 )
+
+[node name="DamageZone" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageZone"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="WalkZone" type="KinematicBody2D" parent="."]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WalkZone"]
+visible = false
+shape = SubResource( 3 )
+disabled = true
