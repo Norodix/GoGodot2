@@ -42,3 +42,6 @@ Height = 600
 
 [node name="Goal" parent="." instance=ExtResource( 7 )]
 position = Vector2( 960, 96 )
+
+[node name="Fire3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 368, 176 )

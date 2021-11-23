@@ -45,7 +45,7 @@
         Gamenode has clearLevels function to make sure there is no two levels active at the same time
     - [x] Add hurt zones where the player can die on the level
     - [x] Maybe fire hurts the player?
-    - [ ] Get overlapping areas for connection: if multiple use the closest
+    - [x] Get overlapping areas for connection: if multiple use the closest
 
 ## Level ideas
     - Vertically narrow corridor, many horizontal oscillators, have to set one by one

@@ -9,12 +9,22 @@ func _ready():
 	$Line2D.set_as_toplevel(true) # do not inherit character position
 	pass # Replace with function body.
 
-	
+
+func findClosestCollider(objects: Array, reference: Vector2):
+	var closestObject = objects[0]
+	var dmin = objects[0].collider.position.distance_to(reference)
+	for object in objects:
+		var d = object.collider.position.distance_to(reference)
+		if d < dmin:
+			dmin = d
+			closestObject = object
+	return closestObject.collider
+
 func findEnergyStorage(mousePos : Vector2):
 	var space = get_world_2d().direct_space_state
 	var collision_objects = space.intersect_point(mousePos, 32, [], 2, true, true)
 	if (collision_objects):
-		return collision_objects[0].collider
+		return findClosestCollider(collision_objects, mousePos)
 	else:
 		return null
 
