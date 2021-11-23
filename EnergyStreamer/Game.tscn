@@ -67,5 +67,5 @@ pause_mode = 1
 [node name="World" parent="ActiveLevel" instance=ExtResource( 1 )]
 
 [connection signal="pressed" from="Pause/Pause/VBoxContainer/Resume" to="Pause/Pause" method="_on_Resume_pressed"]
-[connection signal="pressed" from="Pause/Pause/VBoxContainer/Restart" to="Pause/Pause" method="_on_Resume_pressed"]
+[connection signal="pressed" from="Pause/Pause/VBoxContainer/Restart" to="Pause/Pause" method="_on_Restart_pressed"]
 [connection signal="pressed" from="Pause/Pause/VBoxContainer/Exit" to="Pause/Pause" method="_on_Exit_pressed"]

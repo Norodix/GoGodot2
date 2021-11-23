@@ -27,6 +27,11 @@ func load_level(index: int):
 func goal_reached(body):
 	print("Goal reached")
 	levelindex += 1
+	levelindex = levelindex % levels.size()
 	print("load level ", levelindex)
+	load_level(levelindex)
+	pass
+
+func restart_level():
 	load_level(levelindex)
 	pass

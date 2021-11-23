@@ -24,3 +24,9 @@ func togglePause():
 func clearPause():
 	get_tree().paused = false
 	self.visible = get_tree().paused
+
+
+func _on_Restart_pressed():
+	get_tree().root.get_child(0).restart_level()
+	clearPause()
+	pass # Replace with function body.

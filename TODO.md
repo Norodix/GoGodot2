@@ -25,6 +25,13 @@
     - [ ] Design good levels
     - [ ] Sound design
     - [ ] Implement Level selector, menu and level end target, pause
+        - [ ] Main menu
+        - [ ] Pause menu
+            - [x] resume
+            - [ ] Exit
+            - [x] restart
+            - [ ] level select
+        - [x] Level target
         - Game node as static never changing root -> script adds/frees scenes to active level canvas layer on signal "level END"
             - World background
             - Pause menu -> https://www.youtube.com/watch?v=Jf7F3JhY9Fg
