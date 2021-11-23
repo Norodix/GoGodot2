@@ -1,6 +1,18 @@
 extends Control
 
+var GameNode : Node
+
 func _ready():
+	GameNode = get_tree().root.get_child(0)
+	
+	# Fill hbox with buttons for each level
+	for ButtonIndex in GameNode.levels.size():
+		var button = Button.new()
+		button.text = str(ButtonIndex+1)
+		button.connect("pressed", GameNode, "load_level", [ButtonIndex])
+		button.connect("pressed", self, "clearPause")
+		$HBoxContainerLevels.add_child(button)
+		button.size_flags_horizontal = SIZE_EXPAND_FILL
 	pass # Replace with function body.
 
 func _input(event):
@@ -14,7 +26,7 @@ func _on_Resume_pressed():
 
 
 func _on_Exit_pressed():
-	print("Cannot exit HAHAHAHAHA")
+	get_tree().quit(0)
 	pass # Replace with function body.
 	
 func togglePause():
@@ -27,6 +39,6 @@ func clearPause():
 
 
 func _on_Restart_pressed():
-	get_tree().root.get_child(0).restart_level()
+	GameNode.restart_level()
 	clearPause()
 	pass # Replace with function body.

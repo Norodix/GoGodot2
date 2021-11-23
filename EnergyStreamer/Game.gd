@@ -20,15 +20,16 @@ func load_level(index: int):
 		oldlevel.queue_free()
 	pass
 	
+	levelindex = index
+	print("load level ", levelindex)
 	var newlevel_resource = load(levels[index])
 	var newlevel = newlevel_resource.instance()
 	$ActiveLevel.call_deferred("add_child", newlevel)
 
 func goal_reached(body):
-	print("Goal reached")
+	#print("Goal reached")
 	levelindex += 1
 	levelindex = levelindex % levels.size()
-	print("load level ", levelindex)
 	load_level(levelindex)
 	pass
 

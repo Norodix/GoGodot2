@@ -43,7 +43,7 @@ func transferEnergy(delta):
 	#Calculate max transferable energy between the two nodes
 	var maxTransfer = min(sink.maxE - sink.E, source.E)
 	var transferE = min(maxTransfer, transferSpeed*delta)
-	print("TransferE: ", transferE)
+	#print("TransferE: ", transferE)
 	sink.E += transferE
 	source.E -= transferE
 	
@@ -52,9 +52,9 @@ func transferEnergy(delta):
 func _unhandled_input(event):
 	if (event is InputEventMouseButton):
 		if (event.button_index == BUTTON_LEFT):
-			print("UNHANDLED LEFT MOUSE")
+			#print("UNHANDLED LEFT MOUSE")
 			if event.is_pressed():
-				print("pressed")
+				#print("pressed")
 				#get source if under mouse, set source
 				var mousePos = get_global_mouse_position()
 				var object = findEnergyStorage(mousePos)
@@ -65,7 +65,7 @@ func _unhandled_input(event):
 					source = null
 					sink = null
 			else:
-				print("released")
+				#print("released")
 				#if released, get sink if there was a source (and not the same as source)
 				if (source):
 					var mousePos = get_global_mouse_position()
@@ -81,6 +81,6 @@ func _unhandled_input(event):
 					source = null
 					sink = null
 			
-			print("Sink: ", sink)
-			print("Source: ", source)
+			#print("Sink: ", sink)
+			#print("Source: ", source)
 
