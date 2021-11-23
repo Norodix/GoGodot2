@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://World.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Pause.gd" type="Script" id=2]
 [ext_resource path="res://Game.gd" type="Script" id=3]
 
@@ -78,8 +77,6 @@ __meta__ = {
 
 [node name="ActiveLevel" type="Node" parent="."]
 pause_mode = 1
-
-[node name="World" parent="ActiveLevel" instance=ExtResource( 1 )]
 
 [connection signal="pressed" from="Pause/Pause/VBoxContainer/Resume" to="Pause/Pause" method="_on_Resume_pressed"]
 [connection signal="pressed" from="Pause/Pause/VBoxContainer/Restart" to="Pause/Pause" method="_on_Restart_pressed"]

@@ -43,8 +43,8 @@
         End of level flag/sth sends signal to Game node
         Active level is stored (with index) and handled by the game node (with set level and get level functions)
         Gamenode has clearLevels function to make sure there is no two levels active at the same time
-    - [ ] Add hurt zones where the player can die on the level
-    - [ ] Maybe fire hurts the player?
+    - [x] Add hurt zones where the player can die on the level
+    - [x] Maybe fire hurts the player?
     - [ ] Get overlapping areas for connection: if multiple use the closest
 
 ## Level ideas
@@ -56,6 +56,7 @@
     - Moving platform combined with uplift, cancelling each other
     - Jumping on the limit, have to preserve upwart momentum with draft
     - Stuck in a "well" can get in, cant get out
+    - Raise platform just enough so you can jump and reach the top as well
 
 ## Sound design
     - Background music
@@ -69,6 +70,7 @@
         - Landing
         - Magic energy transfer effect, (maybe something sparkly, have to sync with visual effect)
         - Success sound on flag pickup
+        - Level fail sound
     
     The inspiration character is a lute player, if we could sneak a little bit of lute sound in somewhere that would be a cool small addition
 

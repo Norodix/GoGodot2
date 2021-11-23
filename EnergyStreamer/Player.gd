@@ -30,6 +30,10 @@ func field_effect():
 		effect += field.FieldEffect
 	
 	return effect
+	
+func take_damage():
+	get_node("/root/Game").restart_level()
+	pass
 
 func _physics_process(delta):
 	var right = Input.is_action_pressed("ui_right")
@@ -66,3 +70,8 @@ func _physics_process(delta):
 	velocity += field_effect() * delta
 	
 	velocity = move_and_slide_with_snap(velocity, snap, Vector2.UP)
+
+
+func _on_DamageDetector_area_entered(area):
+	take_damage()
+	pass # Replace with function body.

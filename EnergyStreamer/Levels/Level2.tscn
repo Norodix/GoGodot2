@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://TileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://Goal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://EnergyNodes/RisingPlatform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://EnergyNodes/Fire.tscn" type="PackedScene" id=5]
+
+[node name="Level0" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( -196609, 2, 0, -262128, 2, 0, -131073, 2, 0, -196592, 2, 0, -65537, 2, 0, -131056, 2, 0, -1, 2, 0, -65520, 2, 0, 65535, 2, 0, 16, 2, 0, 131071, 2, 0, 65552, 2, 0, 196607, 2, 0, 131088, 2, 0, 262143, 2, 0, 196624, 2, 0, 327679, 2, 0, 262155, 3, 0, 262156, 3, 0, 262157, 3, 0, 262158, 3, 0, 262159, 3, 0, 262160, 2, 0, 393215, 2, 0, 327696, 2, 0, 458751, 2, 0, 393232, 2, 0, 524287, 2, 0, 458768, 2, 0, 589823, 2, 0, 524304, 2, 0, 655359, 1, 0, 589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 589834, 1, 0, 589835, 1, 0, 589836, 1, 0, 589837, 1, 0, 589838, 1, 0, 589839, 1, 0, 589840, 2, 0 )
+
+[node name="Goal" parent="." instance=ExtResource( 2 )]
+position = Vector2( 864, 224 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 96, 576 )
+
+[node name="Fire" parent="." instance=ExtResource( 5 )]
+position = Vector2( 288, 544 )
+
+[node name="RisingPlatform" parent="." instance=ExtResource( 4 )]
+position = Vector2( 544, 480 )
+Rising = 320

@@ -1,15 +1,14 @@
 extends Node
 
 var levels = [
-	"World.tscn",
-	"World.tscn",
-	"World.tscn",
-	"World.tscn"
+	"res://Levels/Level1.tscn",
+	"res://Levels/Level2.tscn"
 ]
 var levelindex = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	load_level(0)
 	pass # Replace with function body.
 
 
