@@ -114,6 +114,8 @@ maxE = 2.0
 
 [node name="BouncingPlatform" parent="." instance=ExtResource( 5 )]
 position = Vector2( 312, 176 )
+Amplitude = 128
+Freqency = 0.3
 
 [node name="Water" parent="." instance=ExtResource( 6 )]
 position = Vector2( 704, 544 )

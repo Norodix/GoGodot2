@@ -47,6 +47,7 @@
     - Oscillating platform opens up horizontal passage / drop down
     - Source can only be one that the player is touching?
     - Moving platform combined with uplift, cancelling each other
+    - Jumping on the limit, have to preserve upwart momentum with draft
 
 ## Sound design
     - Background music

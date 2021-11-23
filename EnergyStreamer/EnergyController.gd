@@ -52,6 +52,7 @@ func transferEnergy(delta):
 func _unhandled_input(event):
 	if (event is InputEventMouseButton):
 		if (event.button_index == BUTTON_LEFT):
+			print("UNHANDLED LEFT MOUSE")
 			if event.is_pressed():
 				print("pressed")
 				#get source if under mouse, set source
