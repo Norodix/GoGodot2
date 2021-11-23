@@ -47,7 +47,15 @@
     - Oscillating platform opens up horizontal passage / drop down
     - Source can only be one that the player is touching?
     - Moving platform combined with uplift, cancelling each other
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     - Jumping on the limit, have to preserve upwart momentum with draft
+=======
+    - Stuck in a "well" can get in, cant get out
+>>>>>>> Stashed changes
+=======
+    - Stuck in a "well" can get in, cant get out
+>>>>>>> Stashed changes
 
 ## Sound design
     - Background music
