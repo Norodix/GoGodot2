@@ -45,10 +45,7 @@ func _process(delta):
 	pass	
 	
 func transferEnergy(delta):
-	if !(source && sink): 
-		return
-	if ( (source.get("E") == null) || (sink.get("E") == null) ):
-		print("NON ENERGY STORES CONNECTED")
+	if !(is_streaming()):
 		return
 	#Calculate max transferable energy between the two nodes
 	var maxTransfer = min(sink.maxE - sink.E, source.E)
@@ -56,7 +53,17 @@ func transferEnergy(delta):
 	#print("TransferE: ", transferE)
 	sink.E += transferE
 	source.E -= transferE
+	if (transferE == 0): #stop streaming energy when done
+		source = null
+		sink = null
 	
+func is_streaming():
+	if !(source && sink): 
+		return false
+	if ( (source.get("E") == null) || (sink.get("E") == null) ):
+		print("NON ENERGY STORES CONNECTED")
+		return false
+	return true
 	
 	
 func _unhandled_input(event):

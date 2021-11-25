@@ -12,6 +12,7 @@
             - [x] Fire
             - [x] Rising platform
             - [x] Horizontally bouncing/moving platform/springing
+            - [x] Lava
             - [ ] Lamp
             - [ ] Negative energy/direct energy out from water to freeze it
             - [ ] Vibrating bouncy platform
@@ -46,6 +47,8 @@
     - [x] Add hurt zones where the player can die on the level
     - [x] Maybe fire hurts the player?
     - [x] Get overlapping areas for connection: if multiple use the closest
+    - [ ] Player cannot move while streaming energy
+    - [x] Automatically stop streaming energy when done
 
 ## Level ideas
     - Vertically narrow corridor, many horizontal oscillators, have to set one by one

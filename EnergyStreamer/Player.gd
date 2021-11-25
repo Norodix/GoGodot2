@@ -39,8 +39,8 @@ func _physics_process(delta):
 	var right = Input.is_action_pressed("ui_right")
 	var left = Input.is_action_pressed("ui_left")
 	
-	var adv = acceleration*delta
-	var ddv = deceleration*delta
+	var adv = acceleration*delta # acceleration delta v
+	var ddv = deceleration*delta # deceleration delta v
 	var ground = is_on_floor()
 	
 	if right:
