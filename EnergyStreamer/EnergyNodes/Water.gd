@@ -18,10 +18,12 @@ func _ready():
 
 
 func _process(delta):
-	var s = max(E, 0.1) #Dont let it disappear
-	$Sprite.scale = Vector2(s, s)
-	FieldEffect = Vector2(0, - Uplift * E)
+	var upliftON = E > 0.3
+	FieldEffect = Vector2(0, - Uplift * E) if upliftON else Vector2.ZERO
 	var h = Height * E / 2
 	$CollisionShape2D.shape.extents.y = h
 	$CollisionShape2D.transform.origin.y = - h
+	
+	$Particles2D.process_material.set("initial_velocity", h/$Particles2D.lifetime * 2)
+	$Particles2D.emitting = upliftON
 	pass

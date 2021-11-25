@@ -25,3 +25,4 @@ position = Vector2( 928, 416 )
 [node name="Water" parent="." instance=ExtResource( 5 )]
 position = Vector2( 672, 544 )
 E = 0.0
+Height = 300

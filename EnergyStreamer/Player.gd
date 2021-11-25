@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-var max_speed = 800
+var max_speed = 600
 var acceleration_time = 0.1
-var deceleration_time = 0.2
+var deceleration_time = 0.1
 var jump_height = 64*2.5
 var gravity = 3000
 

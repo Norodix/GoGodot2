@@ -1,29 +1,48 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://EnergyNodes/Water.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Sprites/platformPack_tilesheet.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/Cauldron.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/steam.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24, 184.5 )
+extents = Vector2( 24, 300 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32, 32 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+lifetime_randomness = 0.2
+emission_shape = 2
+emission_box_extents = Vector3( 20, 1, 1 )
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 300.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
 
 [node name="Water" type="Area2D"]
 collision_layer = 6
 collision_mask = 0
 script = ExtResource( 1 )
-Height = 369
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -184.5 )
+position = Vector2( 0, -300 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, 4 )
 texture = ExtResource( 2 )
-hframes = 14
-vframes = 7
-frame = 4
 
 [node name="BaseShape" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource( 2 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+z_index = -1
+amount = 15
+lifetime = 2.0
+visibility_rect = Rect2( -64, 0, 128, -600 )
+process_material = SubResource( 3 )
+texture = ExtResource( 3 )
