@@ -27,6 +27,8 @@
     - [ ] Sound design
     - [ ] Implement Level selector, menu and level end target, pause
         - [ ] Main menu
+            - [ ] Volume control
+            - [ ] Credits
         - [x] Pause menu
             - [x] resume
             - [x] Exit
@@ -47,7 +49,7 @@
     - [x] Add hurt zones where the player can die on the level
     - [x] Maybe fire hurts the player?
     - [x] Get overlapping areas for connection: if multiple use the closest
-    - [ ] Player cannot move while streaming energy
+    - [x] Player cannot move while streaming energy
     - [x] Automatically stop streaming energy when done
 
 ## Level ideas
@@ -60,6 +62,7 @@
     - Jumping on the limit, have to preserve upwart momentum with draft
     - Stuck in a "well" can get in, cant get out
     - Raise platform just enough so you can jump and reach the top as well
+    - Platform would move too high into danger, must stop manually
 
 ## Sound design
     - Background music

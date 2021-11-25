@@ -36,8 +36,15 @@ func take_damage():
 	pass
 
 func _physics_process(delta):
-	var right = Input.is_action_pressed("ui_right")
-	var left = Input.is_action_pressed("ui_left")
+	var right = false
+	var left = false
+	var jumping = false
+	#Only allow movement when not streaming energy
+	if !($EnergyContoller.is_streaming()):
+		right = Input.is_action_pressed("ui_right")
+		left = Input.is_action_pressed("ui_left")
+		jumping = Input.is_action_pressed("jump")
+		
 	
 	var adv = acceleration*delta # acceleration delta v
 	var ddv = deceleration*delta # deceleration delta v
@@ -62,7 +69,7 @@ func _physics_process(delta):
 	velocity.y += gravity * delta
 	var snap = Vector2.DOWN * 32 if is_on_floor() else Vector2.ZERO
 	#velocity = move_and_slide(velocity, Vector2.UP)
-	if Input.is_action_pressed("jump"):
+	if jumping:
 		if ground:
 			velocity.y = jump_speed
 			snap = Vector2.ZERO
