@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://EnergyNodes/Lava.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/platformPack_tilesheet.png" type="Texture" id=2]
+[ext_resource path="res://EnergyNodes/EnergyBar.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32, 32 )
@@ -43,3 +44,6 @@ collision_mask = 0
 visible = false
 shape = SubResource( 3 )
 disabled = true
+
+[node name="EnergyBar" parent="." instance=ExtResource( 3 )]
+position = Vector2( -8, 16 )

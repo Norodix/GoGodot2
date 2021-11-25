@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://EnergyNodes/Water.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/Cauldron.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Sprites/steam.png" type="Texture" id=3]
+[ext_resource path="res://EnergyNodes/EnergyBar.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24, 300 )
@@ -46,3 +47,6 @@ lifetime = 2.0
 visibility_rect = Rect2( -64, 0, 128, -600 )
 process_material = SubResource( 3 )
 texture = ExtResource( 3 )
+
+[node name="EnergyBar" parent="." instance=ExtResource( 4 )]
+position = Vector2( -8, 0 )
