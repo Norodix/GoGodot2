@@ -6,11 +6,6 @@
         - [x] Common property energy
         - [ ] Custom behaviour, fire size, boiling stream etc.
         - [ ] Create animations
-            - [ ] Idle
-            - [ ] Walking
-            - [ ] Jumping -> leaves "exploding"
-            - [ ] Falling
-            - [ ] Magic
         - [ ] Visualize current energy level on scale
         - [ ] Nodes
             - [x] Cauldron
@@ -84,6 +79,20 @@
         - Level fail sound
     
     The inspiration character is a lute player, if we could sneak a little bit of lute sound in somewhere that would be a cool small addition
+
+## Animations and Assets
+    - [ ] Character
+        - [x] Idle
+        - [ ] Walking
+        - [ ] Jumping -> leaves "exploding"
+        - [ ] Falling
+        - [ ] Magic / casting
+    - [ ] Fire
+    - [ ] Lava and stone
+    - [ ] Cauldron bubbles (optional)
+    - [ ] Background
+
+
 
 ## Other/Optional
 
