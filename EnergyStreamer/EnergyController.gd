@@ -6,7 +6,8 @@ var transferSpeed = 0.25
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Line2D.set_as_toplevel(true) # do not inherit character position
+	$Beam.set_as_toplevel(true) # do not inherit character position
+	$Particles2D.set_as_toplevel(true)
 	pass # Replace with function body.
 
 
@@ -31,15 +32,18 @@ func findEnergyStorage(mousePos : Vector2):
 
 func _process(delta):
 	if (source and not sink):
-		$Line2D.visible = true
-		$Line2D.points[0] = source.global_position
-		$Line2D.points[1] = get_global_mouse_position()
+		$Beam.visible = true
+		$Beam.points[0] = source.global_position
+		$Beam.points[1] = get_global_mouse_position()
+		$Beam.beaming = false
 	elif (source and sink):
-		$Line2D.visible = true
-		$Line2D.points[0] = source.global_position
-		$Line2D.points[1] = sink.global_position
+		$Beam.visible = true
+		$Beam.points[0] = source.global_position
+		$Beam.points[1] = sink.global_position
+		$Beam.beaming = true
 	else:
-		$Line2D.visible = false
+		$Beam.visible = false
+		$Beam.beaming = false
 	
 	transferEnergy(delta)
 	pass	

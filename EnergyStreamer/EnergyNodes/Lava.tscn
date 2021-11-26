@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://EnergyNodes/Lava.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/platformPack_tilesheet.png" type="Texture" id=2]
@@ -12,6 +12,18 @@ extents = Vector2( 32, 32 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 32, 32 )
+
+[sub_resource type="ParticlesMaterial" id=4]
+emission_shape = 2
+emission_box_extents = Vector3( 32, 1, 1 )
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 60.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 2.0
+color = Color( 0.352941, 0.054902, 0.054902, 1 )
 
 [node name="Lava" type="Area2D"]
 collision_layer = 2
@@ -47,3 +59,9 @@ disabled = true
 
 [node name="EnergyBar" parent="." instance=ExtResource( 3 )]
 position = Vector2( -8, 16 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 0, -23 )
+z_index = -1
+amount = 3
+process_material = SubResource( 4 )

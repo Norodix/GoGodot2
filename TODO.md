@@ -4,18 +4,22 @@
     
 - [ ] Create energy nodes
     - [x] Common property energy
-    - [ ] Custom behaviour, fire size, boiling stream etc.
+    - [x] Custom behaviour, fire size, boiling stream etc.
     - [ ] Create animations
-    - [ ] Visualize current energy level on scale
-    - [ ] Nodes
+        - [ ] Cauldron boiling
+        - [ ] Cauldron steaming
+        - [ ] Lava popping
+        - [ ] Fire smoking
+    - [x] Visualize current energy level on scale
+    - [x] Nodes
         - [x] Cauldron
         - [x] Fire
         - [x] Rising platform
         - [x] Horizontally bouncing/moving platform/springing
         - [x] Lava
-        - [ ] Lamp
-        - [ ] Negative energy/direct energy out from water to freeze it
-        - [ ] Vibrating bouncy platform
+        - [ ] ~~Lamp~~
+        - [ ] ~~Negative energy/direct energy out from water to freeze it~~
+        - [ ] ~~Vibrating bouncy platform~~
 - [x] Create connection handler
     - [x] Detect energy nodes based on collision layer and energy property
     - [x] Handle unhandled inputs in all scenes
