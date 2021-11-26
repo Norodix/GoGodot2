@@ -6,6 +6,11 @@
         - [x] Common property energy
         - [ ] Custom behaviour, fire size, boiling stream etc.
         - [ ] Create animations
+            - [ ] Idle
+            - [ ] Walking
+            - [ ] Jumping -> leaves "exploding"
+            - [ ] Falling
+            - [ ] Magic
         - [ ] Visualize current energy level on scale
         - [ ] Nodes
             - [x] Cauldron
