@@ -77,7 +77,15 @@ func _physics_process(delta):
 	velocity += field_effect() * delta
 	
 	velocity = move_and_slide_with_snap(velocity, snap, Vector2.UP)
+	
 
+func _process(delta):
+	#animate the player character
+	var epsilon = 0.05
+	if velocity.x > epsilon:
+		$AnimatedSprite.flip_h = false
+	if velocity.x < -epsilon:
+		$AnimatedSprite.flip_h = true
 
 func _on_DamageDetector_area_entered(area):
 	take_damage()
