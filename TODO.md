@@ -6,7 +6,7 @@
     - [x] Common property energy
     - [x] Custom behaviour, fire size, boiling stream etc.
     - [ ] Create animations
-        - [ ] Cauldron boiling
+        - [x] Cauldron boiling
         - [x] Cauldron steaming
         - [x] Lava popping
         - [ ] Fire smoking
@@ -56,6 +56,7 @@
 - [x] Player cannot move while streaming energy
 - [x] Automatically stop streaming energy when done
 - [x] Spikes
+- [ ] Create tutorial texts on the background
 
 ## Level ideas
 - [x] Vertically narrow corridor, many horizontal oscillators, have to set one by one
@@ -64,10 +65,12 @@
 - [ ] Oscillating platform opens up horizontal passage / drop down
 - [x] ~~Source can only be one that the player is touching?~~
 - [ ] Moving platform combined with uplift, cancelling each other
-- [ ] Jumping on the limit, have to preserve upwart momentum with draft
+- [x] Jumping on the limit, have to preserve upwart momentum with draft
 - [ ] Stuck in a "well" can get in, cant get out
-- [ ] Raise platform just enough so you can jump and reach the top as well
+- [x] Raise platform just enough so you can jump and reach the top as well
 - [x] Platform would move too high into danger, must stop manually
+- [ ] Combine cauldron uplift with moving platform
+- [ ] Array of cauldrons and float through it
 
 ## Sound design
 - Background music
@@ -94,7 +97,7 @@ The inspiration character is a lute player, if we could sneak a little bit of lu
     - [ ] Magic / casting
 - [ ] Fire
 - [ ] Lava and stone
-- [ ] Cauldron bubbles (optional)
+- [x] Cauldron bubbles (optional)
 - [ ] Background
 
 
