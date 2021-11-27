@@ -7,8 +7,8 @@
     - [x] Custom behaviour, fire size, boiling stream etc.
     - [ ] Create animations
         - [ ] Cauldron boiling
-        - [ ] Cauldron steaming
-        - [ ] Lava popping
+        - [x] Cauldron steaming
+        - [x] Lava popping
         - [ ] Fire smoking
     - [x] Visualize current energy level on scale
     - [x] Nodes
@@ -26,7 +26,7 @@
     - [x] Handle connection graphics (line/spline)
     - [x] Drive the energy transfer in the process function
 - [x] Implement or import character controller
-- [ ] Implement tilemap for levels https://kenney.nl/assets/abstract-platformer
+- [x] Implement tilemap for levels https://kenney.nl/assets/abstract-platformer
 - [ ] Design good levels
 - [ ] Sound design
 - [ ] Implement Level selector, menu and level end target, pause
