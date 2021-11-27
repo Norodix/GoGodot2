@@ -9,6 +9,9 @@ pause_mode = 2
 script = ExtResource( 3 )
 
 [node name="Background" type="Sprite" parent="."]
+modulate = Color( 1, 0.980392, 0.94902, 1 )
+position = Vector2( 2.38419e-07, -3.8147e-06 )
+scale = Vector2( 1, 1.97667 )
 z_index = -100
 z_as_relative = false
 texture = ExtResource( 1 )

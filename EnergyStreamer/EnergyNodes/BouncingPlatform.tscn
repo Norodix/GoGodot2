@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://EnergyNodes/BouncingPlatform.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Sprites/platformPack_tilesheet.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/tileset.png" type="Texture" id=2]
 [ext_resource path="res://EnergyNodes/EnergyBar.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 96, 32 )
+extents = Vector2( 96, 16 )
 
 [node name="BouncingPlatform" type="KinematicBody2D"]
 collision_layer = 3
@@ -16,25 +16,26 @@ BounceDirection = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 0, 16 )
 texture = ExtResource( 2 )
-hframes = 14
-vframes = 7
-frame = 14
+hframes = 7
+vframes = 3
+frame = 18
 
-[node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 64, 0 )
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( -64, 16 )
 texture = ExtResource( 2 )
-hframes = 14
-vframes = 7
-frame = 14
+hframes = 7
+vframes = 3
+frame = 17
 
-[node name="Sprite3" type="Sprite" parent="."]
-position = Vector2( -64, 0 )
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 64, 16 )
 texture = ExtResource( 2 )
-hframes = 14
-vframes = 7
-frame = 14
+hframes = 7
+vframes = 3
+frame = 19
 
 [node name="EnergyBar" parent="." instance=ExtResource( 3 )]
-position = Vector2( 56, 16 )
+position = Vector2( 16, 0 )

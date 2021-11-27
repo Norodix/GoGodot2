@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BeamTexture.png-e3d640a9d18bd2701e7acdfdfbc7afc5.stex"
+path="res://.import/tileset.png-f52e8e44f74a535dd898a49592afe6d9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/BeamTexture.png"
-dest_files=[ "res://.import/BeamTexture.png-e3d640a9d18bd2701e7acdfdfbc7afc5.stex" ]
+source_file="res://Assets/Sprites/tileset.png"
+dest_files=[ "res://.import/tileset.png-f52e8e44f74a535dd898a49592afe6d9.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false

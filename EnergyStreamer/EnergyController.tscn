@@ -54,6 +54,7 @@ script = ExtResource( 1 )
 environment = SubResource( 3 )
 
 [node name="Beam" type="Line2D" parent="."]
+visible = false
 material = SubResource( 7 )
 points = PoolVector2Array( 0, 0, 300, 0 )
 width = 5.0
