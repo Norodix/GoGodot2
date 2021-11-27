@@ -1,14 +1,33 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://EnergyController.gd" type="Script" id=1]
 [ext_resource path="res://Beam.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Sprites/BlurryDot.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/BeamTexture.png" type="Texture" id=4]
 
 [sub_resource type="Environment" id=3]
 background_mode = 4
 glow_enabled = true
 glow_intensity = 3.37
 glow_strength = 0.57
+
+[sub_resource type="Shader" id=6]
+code = "shader_type canvas_item;
+uniform float speed = 3.0;
+uniform vec4 tintColor : hint_color;
+uniform float glowFactor = 3.0;
+
+void fragment(){
+	vec2 uv = UV - vec2(TIME, 0) * speed;
+	COLOR.rgb = tintColor.rgb * glowFactor;
+	COLOR.a = texture(TEXTURE, uv).r;
+}"
+
+[sub_resource type="ShaderMaterial" id=7]
+shader = SubResource( 6 )
+shader_param/speed = 6.0
+shader_param/tintColor = Color( 1, 0, 0, 1 )
+shader_param/glowFactor = 6.0
 
 [sub_resource type="Curve" id=4]
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.102273 ), -2.3, 0.0, 0, 0 ]
@@ -35,14 +54,20 @@ script = ExtResource( 1 )
 environment = SubResource( 3 )
 
 [node name="Beam" type="Line2D" parent="."]
+material = SubResource( 7 )
 points = PoolVector2Array( 0, 0, 300, 0 )
-default_color = Color( 3, 0.2, 0, 1 )
+width = 5.0
+texture = ExtResource( 4 )
+texture_mode = 1
 begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource( 2 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
 modulate = Color( 5, 1, 1, 1 )
+emitting = false
+amount = 12
+lifetime = 0.8
 visibility_rect = Rect2( -100, -100, 400, 200 )
 process_material = SubResource( 2 )
 texture = ExtResource( 3 )

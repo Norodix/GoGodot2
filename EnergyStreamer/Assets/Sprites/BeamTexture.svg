@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
+   sodipodi:docname="BeamTexture.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:object-paths="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:bbox-paths="false"
+     inkscape:snap-global="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:zoom="3.6233469"
+     inkscape:cx="343.60497"
+     inkscape:cy="517.61536"
+     inkscape:window-width="1920"
+     inkscape:window-height="1006"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;stroke-width:3.35318"
+       id="rect846"
+       width="7.2097549"
+       height="26.622297"
+       x="126.18614"
+       y="-115.15589"
+       ry="0"
+       rx="0"
+       transform="rotate(90)"
+       inkscape:export-filename="/home/bence/Documents/GoGodot2/EnergyStreamer/Assets/Sprites/BeamTexture.png"
+       inkscape:export-xdpi="112.73609"
+       inkscape:export-ydpi="112.73609" />
+    <path
+       id="rect996"
+       style="fill:#000000;stroke-width:6.28195"
+       d="m 101.97613,126.18615 5.29167,3.60487 -5.29167,3.60488 h -2.777222 -2.77722 l 5.291672,-3.60488 -5.291672,-3.60487 h 2.77722 z"
+       sodipodi:nodetypes="ccccccccc"
+       inkscape:export-filename="/home/bence/Documents/GoGodot2/EnergyStreamer/Assets/Sprites/BeamTexture.png"
+       inkscape:export-xdpi="112.73609"
+       inkscape:export-ydpi="112.73609" />
+  </g>
+</svg>
