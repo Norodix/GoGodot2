@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var max_speed = 600
-var acceleration_time = 0.1
+var acceleration_time = 0.2
 var deceleration_time = 0.1
 var jump_height = 64*2.1
 var gravity = 3000
@@ -89,4 +89,12 @@ func _process(delta):
 
 func _on_DamageDetector_area_entered(area):
 	take_damage()
+	pass # Replace with function body.
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	#wait one second to buffer, if still outside reset
+	yield(get_tree().create_timer(1.0), "timeout")
+	if !$VisibilityNotifier2D.is_on_screen():
+		take_damage()
 	pass # Replace with function body.
