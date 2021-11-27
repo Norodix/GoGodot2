@@ -55,19 +55,19 @@
 - [x] Get overlapping areas for connection: if multiple use the closest
 - [x] Player cannot move while streaming energy
 - [x] Automatically stop streaming energy when done
-- [ ] Spikes
+- [x] Spikes
 
 ## Level ideas
 - [x] Vertically narrow corridor, many horizontal oscillators, have to set one by one
-- [ ] Cauldron lift up/ basic platform lift up
+- [x] Cauldron lift up/ basic platform lift up
 - [ ] Need to find place to dump energy instead of sourcing it
 - [ ] Oscillating platform opens up horizontal passage / drop down
-- [ ] Source can only be one that the player is touching?
+- [x] ~~Source can only be one that the player is touching?~~
 - [ ] Moving platform combined with uplift, cancelling each other
 - [ ] Jumping on the limit, have to preserve upwart momentum with draft
 - [ ] Stuck in a "well" can get in, cant get out
 - [ ] Raise platform just enough so you can jump and reach the top as well
-- [ ] Platform would move too high into danger, must stop manually
+- [x] Platform would move too high into danger, must stop manually
 
 ## Sound design
 - Background music
