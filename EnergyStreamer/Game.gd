@@ -11,6 +11,7 @@ var levels = [
 	"res://Levels/Level8.tscn"
 ]
 var levelindex = 0
+var canPause = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,6 +23,7 @@ func load_level(index: int):
 	#Unload the current levels
 	var oldlevels = $ActiveLevel.get_children()
 	for oldlevel in oldlevels:
+		$ActiveLevel.remove_child(oldlevel)
 		oldlevel.queue_free()
 	pass
 	
@@ -29,15 +31,33 @@ func load_level(index: int):
 	print("load level ", levelindex)
 	var newlevel_resource = load(levels[index])
 	var newlevel = newlevel_resource.instance()
-	$ActiveLevel.call_deferred("add_child", newlevel)
+	$ActiveLevel.add_child(newlevel)
 
 func goal_reached(body):
-	#print("Goal reached")
+	var sfx = $Sounds/Success
+	get_tree().paused = true
+	canPause = false
+	sfx.play()
+	yield(sfx, "finished")
+	get_tree().paused = false
+	canPause = true
 	levelindex += 1
 	levelindex = levelindex % levels.size()
 	load_level(levelindex)
+	pass
+	
+func failure():
+	var sfx = $Sounds/Failure
+	get_tree().paused = true
+	canPause = false
+	sfx.play()
+	yield(sfx, "finished")
+	get_tree().paused = false
+	canPause = true
+	restart_level()
 	pass
 
 func restart_level():
 	load_level(levelindex)
 	pass
+

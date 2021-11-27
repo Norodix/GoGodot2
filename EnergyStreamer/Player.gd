@@ -13,6 +13,8 @@ var jump_speed
 
 var velocity = Vector2.ZERO
 
+var freeze = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -32,7 +34,7 @@ func field_effect():
 	return effect
 	
 func take_damage():
-	get_node("/root/Game").restart_level()
+	get_node("/root/Game").failure()
 	pass
 
 func _physics_process(delta):
@@ -96,5 +98,5 @@ func _on_VisibilityNotifier2D_screen_exited():
 	#wait one second to buffer, if still outside reset
 	yield(get_tree().create_timer(1.0), "timeout")
 	if !$VisibilityNotifier2D.is_on_screen():
-		take_damage()
+		get_node("/root/Game").restart_level()
 	pass # Replace with function body.

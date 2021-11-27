@@ -30,10 +30,14 @@ func _on_Exit_pressed():
 	pass # Replace with function body.
 	
 func togglePause():
+	if !GameNode.canPause:
+		return
 	get_tree().paused = !get_tree().paused
 	self.visible = get_tree().paused
 	
 func clearPause():
+	if !GameNode.canPause:
+		return
 	get_tree().paused = false
 	self.visible = get_tree().paused
 
