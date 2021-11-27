@@ -26,4 +26,5 @@ func _process(delta):
 	
 	$Particles2D.process_material.set("initial_velocity", h/$Particles2D.lifetime * 2)
 	$Particles2D.emitting = upliftON
+	$Bubbles.emitting = upliftON
 	pass
