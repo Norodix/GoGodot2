@@ -14,7 +14,7 @@ func _ready():
 
 
 func _process(delta):
-	$Sprite.modulate.r = 0.2 + E
+	$Sprite.modulate.r = 0.3 + E * 1.3
 	var frozen = E < 0.01
 	#Disable damage when the lava is frozen
 	$DamageZone/CollisionShape2D.disabled = frozen
