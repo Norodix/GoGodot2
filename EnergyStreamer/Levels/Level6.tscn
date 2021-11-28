@@ -7,7 +7,7 @@
 [ext_resource path="res://EnergyNodes/BouncingPlatform.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Spikes.tscn" type="PackedScene" id=6]
 
-[node name="Level0" type="Node2D"]
+[node name="Level6" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )

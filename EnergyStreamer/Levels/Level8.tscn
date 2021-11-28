@@ -5,7 +5,7 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://EnergyNodes/Water.tscn" type="PackedScene" id=4]
 
-[node name="Level0" type="Node2D"]
+[node name="Level8" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
