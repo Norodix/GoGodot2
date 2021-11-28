@@ -35,6 +35,8 @@ func togglePause():
 		return
 	get_tree().paused = !get_tree().paused
 	self.visible = get_tree().paused
+	if get_tree().paused == true:
+		$VBoxContainer/Resume.grab_focus()
 	
 func clearPause():
 	if !GameNode.canPause:

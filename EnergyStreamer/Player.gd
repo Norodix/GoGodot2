@@ -87,8 +87,12 @@ func _process(delta):
 	var epsilon = 0.05
 	if velocity.x > epsilon:
 		$AnimatedSprite.flip_h = false
+		$CastingParticles.position.x = abs($CastingParticles.position.x)
+		$CastingParticles.process_material.direction.x = 1
 	if velocity.x < -epsilon:
 		$AnimatedSprite.flip_h = true
+		$CastingParticles.position.x = - abs($CastingParticles.position.x)
+		$CastingParticles.process_material.direction.x = - 1
 	#$Casting.visible = $EnergyContoller.is_streaming()
 	$CastingParticles.emitting = $EnergyContoller.is_active()
 		

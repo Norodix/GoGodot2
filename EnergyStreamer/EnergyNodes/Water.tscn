@@ -1,13 +1,14 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://EnergyNodes/Water.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/cauldron.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Sprites/steam.png" type="Texture" id=3]
 [ext_resource path="res://EnergyNodes/EnergyBar.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Sprites/BlurryDot.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Music/Bubbles.wav" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24, 96 )
+extents = Vector2( 24, 300 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32, 32 )
@@ -20,7 +21,7 @@ flag_disable_z = true
 direction = Vector3( 0, -1, 0 )
 spread = 0.0
 gravity = Vector3( 0, 0, 0 )
-initial_velocity = 96.0
+initial_velocity = 300.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 
@@ -76,3 +77,7 @@ modulate = Color( 0.356863, 0.709804, 0.792157, 1 )
 z_index = -1
 process_material = SubResource( 4 )
 texture = ExtResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true

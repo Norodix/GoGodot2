@@ -117,6 +117,7 @@ texture = ExtResource( 5 )
 [node name="CastingParticles" type="Particles2D" parent="."]
 modulate = Color( 1.5, 1, 1, 1 )
 position = Vector2( 16, -43 )
+scale = Vector2( 1, 1 )
 amount = 12
 lifetime = 0.8
 visibility_rect = Rect2( -100, -100, 400, 200 )

@@ -36,14 +36,17 @@ position = Vector2( 672, 288 )
 position = Vector2( 160, 464 )
 maxE = 2.0
 
-[node name="Spikes" parent="." instance=ExtResource( 6 )]
+[node name="Spiketrap" type="Node2D" parent="."]
 position = Vector2( 448, 120 )
+z_index = -1
 
-[node name="Spikes2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 512, 120 )
+[node name="Spikes" parent="Spiketrap" instance=ExtResource( 6 )]
 
-[node name="Spikes3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 576, 120 )
+[node name="Spikes2" parent="Spiketrap" instance=ExtResource( 6 )]
+position = Vector2( 64, 0 )
 
-[node name="Spikes4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 640, 120 )
+[node name="Spikes3" parent="Spiketrap" instance=ExtResource( 6 )]
+position = Vector2( 128, 0 )
+
+[node name="Spikes4" parent="Spiketrap" instance=ExtResource( 6 )]
+position = Vector2( 192, 0 )
