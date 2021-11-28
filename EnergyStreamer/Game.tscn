@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Sprites/background.png" type="Texture" id=1]
 [ext_resource path="res://Pause.gd" type="Script" id=2]
@@ -12,53 +12,6 @@
 background_mode = 4
 background_canvas_max_layer = 3
 glow_enabled = true
-
-[sub_resource type="Animation" id=2]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sounds/BackgroundLoop:volume_db")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "RampDown"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sounds/BackgroundLoop:volume_db")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 2 ),
-"update": 0,
-"values": [ -20.0 ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "RampUp"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sounds/BackgroundLoop:volume_db")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 0.34151 ),
-"update": 0,
-"values": [ -10.0 ]
-}
 
 [node name="Game" type="Node"]
 pause_mode = 2
@@ -184,13 +137,10 @@ stream = ExtResource( 5 )
 
 [node name="BackgroundLoop" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 7 )
+volume_db = -10.0
 autoplay = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sounds/BackgroundLoop"]
-root_node = NodePath("../../..")
-anims/RESET = SubResource( 2 )
-anims/RampDown = SubResource( 3 )
-anims/RampUp = SubResource( 4 )
+[node name="Tween" type="Tween" parent="Sounds/BackgroundLoop"]
 
 [connection signal="pressed" from="Pause/Pause/VBoxContainer/Resume" to="Pause/Pause" method="_on_Resume_pressed"]
 [connection signal="pressed" from="Pause/Pause/VBoxContainer/Restart" to="Pause/Pause" method="_on_Restart_pressed"]
