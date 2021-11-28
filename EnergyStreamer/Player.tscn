@@ -8,7 +8,7 @@
 [ext_resource path="res://Assets/Sprites/TiledLeaf.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Music/leafDrop.wav" type="AudioStream" id=7]
 [ext_resource path="res://Assets/Sprites/character_jump.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Music/Magic.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Music/5213.ogg" type="AudioStream" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 14.5, 44 )
@@ -25,6 +25,14 @@ region = Rect2( 0, 0, 64, 64 )
 atlas = ExtResource( 4 )
 region = Rect2( 64, 0, 64, 64 )
 
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 8 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 8 )
+region = Rect2( 256, 0, 64, 64 )
+
 [sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 64, 64 )
@@ -37,14 +45,6 @@ region = Rect2( 64, 0, 64, 64 )
 atlas = ExtResource( 8 )
 region = Rect2( 128, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 8 )
-region = Rect2( 192, 0, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 8 )
-region = Rect2( 256, 0, 64, 64 )
-
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
 "frames": [ SubResource( 4 ), SubResource( 5 ) ],
@@ -52,15 +52,15 @@ animations = [ {
 "name": "Idle",
 "speed": 3.0
 }, {
-"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
-"loop": false,
-"name": "Jump",
-"speed": 30.0
-}, {
 "frames": [ SubResource( 17 ), SubResource( 18 ) ],
 "loop": false,
 "name": "Fall",
 "speed": 6.0
+}, {
+"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"loop": false,
+"name": "Jump",
+"speed": 30.0
 } ]
 
 [sub_resource type="Shader" id=7]
@@ -177,7 +177,6 @@ texture = ExtResource( 5 )
 [node name="CastingParticles" type="Particles2D" parent="."]
 modulate = Color( 1.5, 1, 1, 1 )
 position = Vector2( 16, -43 )
-scale = Vector2( 1, 1 )
 amount = 12
 lifetime = 0.8
 visibility_rect = Rect2( -100, -100, 400, 200 )
@@ -189,7 +188,7 @@ texture = ExtResource( 5 )
 material = SubResource( 12 )
 z_index = -30
 emitting = false
-lifetime = 3.0
+lifetime = 2.1
 one_shot = true
 explosiveness = 1.0
 local_coords = false
@@ -201,6 +200,7 @@ stream = ExtResource( 7 )
 
 [node name="Magic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
+volume_db = 8.0
 
 [connection signal="area_entered" from="DamageDetector" to="." method="_on_DamageDetector_area_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

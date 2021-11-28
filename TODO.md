@@ -93,9 +93,9 @@ The inspiration character is a lute player, if we could sneak a little bit of lu
 - [ ] Character
     - [x] Idle
     - [ ] Walking
-    - [ ] Jumping -> leaves "exploding"
-    - [ ] Falling
-    - [ ] Magic / casting
+    - [x] Jumping -> leaves "exploding"
+    - [x] Falling
+    - [x] Magic / casting
 - [ ] Fire
 - [x] Lava and stone
 - [x] Cauldron bubbles (optional)
@@ -115,6 +115,6 @@ ffmpeg -pattern_type glob -i "leaf*.png" -filter_complex "tile=2x1" TiledLeaf.pn
 ## Left to do
 - [ ] Walking animation
 - [ ] Menu with music
-- [ ] Outro level
-- [ ] Implement jumping animation
+- [x] Outro level
+- [x] Implement jumping animation
 - [ ] Background

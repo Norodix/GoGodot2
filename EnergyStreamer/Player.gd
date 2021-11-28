@@ -121,10 +121,11 @@ func assign_animation():
 	#$Casting.visible = $EnergyController.is_streaming()
 	$CastingParticles.emitting = $EnergyController.is_active()
 	if $EnergyController.is_streaming():
-		$Magic.play()
+		if !$Magic.is_playing():
+			$Magic.play()
 	else:
 		$Magic.stop()
-	
+
 	var anim
 	if !is_on_floor():
 		#jumping animation

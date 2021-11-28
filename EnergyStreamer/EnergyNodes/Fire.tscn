@@ -51,7 +51,7 @@ autoplay = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 5 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="DamageZone" type="Area2D" parent="AnimatedSprite"]

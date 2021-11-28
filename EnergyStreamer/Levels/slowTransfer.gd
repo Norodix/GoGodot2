@@ -9,7 +9,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#this is a precision map, make energy transfer much slower
-	$Player/EnergyContoller.transferSpeed = 0.1
+	$Player/EnergyController.transferSpeed = 0.1
 	pass # Replace with function body.
 
 
