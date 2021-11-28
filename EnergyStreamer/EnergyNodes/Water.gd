@@ -17,6 +17,7 @@ var sfx_db = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	sfx_db = $AudioStreamPlayer.volume_db
+	$AudioStreamPlayer.seek(rand_range(0, $AudioStreamPlayer.stream.get_length()))
 	pass # Replace with function body.
 
 

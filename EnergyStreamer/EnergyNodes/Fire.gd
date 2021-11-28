@@ -15,6 +15,7 @@ func _ready():
 
 func _process(delta):
 	var s = max(E/maxE, 0.1) #Dont let it disappear
-	$Sprite.scale = Vector2(s, s)
+	$AnimatedSprite.scale = Vector2(s, s)
+	$AnimatedSprite.position.y = (1-s) * 32
 	$AudioStreamPlayer.volume_db = log(E / maxE) * 20 + sfx_db
 	pass
