@@ -70,7 +70,8 @@
 - [x] Raise platform just enough so you can jump and reach the top as well
 - [x] Platform would move too high into danger, must stop manually
 - [ ] Combine cauldron uplift with moving platform
-- [ ] Array of cauldrons and float through it
+- [x] Array of cauldrons and float through it
+- [x] Drop down but it needs to be slow so you can move sideways into safety from spike on bottom
 
 ## Sound design
 - Background music
