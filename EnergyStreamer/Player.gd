@@ -14,6 +14,7 @@ var jump_speed
 var velocity = Vector2.ZERO
 
 var freeze = false
+var ground
 
 
 # Called when the node enters the scene tree for the first time.
@@ -50,7 +51,15 @@ func _physics_process(delta):
 	
 	var adv = acceleration*delta # acceleration delta v
 	var ddv = deceleration*delta # deceleration delta v
-	var ground = is_on_floor()
+	
+	# if just touched ground make leaf explosion
+	if (!ground) && is_on_floor() && !$Leaves.emitting:
+		print("dropped")
+		$Leaves.restart()
+		$Leaves.emitting = true
+		$LeafDrop.play()
+		
+	ground = is_on_floor()
 	
 	if right:
 		velocity.x += adv

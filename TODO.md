@@ -97,7 +97,7 @@ The inspiration character is a lute player, if we could sneak a little bit of lu
     - [ ] Falling
     - [ ] Magic / casting
 - [ ] Fire
-- [ ] Lava and stone
+- [x] Lava and stone
 - [x] Cauldron bubbles (optional)
 - [ ] Background
 
@@ -105,5 +105,10 @@ The inspiration character is a lute player, if we could sneak a little bit of lu
 
 ## Other/Optional
 
-- [ ] Automate itch uploads
+- [x] Automate itch uploads
 - [ ] Mobile controls, animation tests etc
+
+## Notes
+ffmpeg -pattern_type glob -i "leaf*.png" -filter_complex "tile=2x1" TiledLeaf.png
+
+
