@@ -56,7 +56,7 @@
 - [x] Player cannot move while streaming energy
 - [x] Automatically stop streaming energy when done
 - [x] Spikes
-- [ ] Create tutorial texts on the background
+- [x] Create tutorial texts on the background
 
 ## Level ideas
 - [x] Vertically narrow corridor, many horizontal oscillators, have to set one by one

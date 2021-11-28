@@ -89,6 +89,9 @@ func _process(delta):
 		$AnimatedSprite.flip_h = false
 	if velocity.x < -epsilon:
 		$AnimatedSprite.flip_h = true
+	#$Casting.visible = $EnergyContoller.is_streaming()
+	$CastingParticles.emitting = $EnergyContoller.is_active()
+		
 
 func _on_DamageDetector_area_entered(area):
 	take_damage()

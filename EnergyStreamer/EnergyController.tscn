@@ -15,7 +15,7 @@ shader_param/glowFactor = 1.0
 [sub_resource type="Curve" id=4]
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.102273 ), -2.3, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=5]
+[sub_resource type="CurveTexture" id=8]
 curve = SubResource( 4 )
 
 [sub_resource type="ParticlesMaterial" id=2]
@@ -28,7 +28,7 @@ initial_velocity = 300.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 scale = 0.3
-scale_curve = SubResource( 5 )
+scale_curve = SubResource( 8 )
 
 [node name="EnergyContoller" type="Node2D"]
 script = ExtResource( 1 )
@@ -47,7 +47,7 @@ script = ExtResource( 2 )
 [node name="Particles2D" type="Particles2D" parent="."]
 modulate = Color( 1.5, 1, 1, 1 )
 emitting = false
-amount = 12
+amount = 24
 lifetime = 0.8
 visibility_rect = Rect2( -100, -100, 400, 200 )
 process_material = SubResource( 2 )

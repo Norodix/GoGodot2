@@ -68,7 +68,14 @@ func is_streaming():
 		print("NON ENERGY STORES CONNECTED")
 		return false
 	return true
-	
+
+func is_active():
+	if !(source || sink): 
+		return false
+	if ( (source.get("E") == null) && (sink.get("E") == null) ):
+		print("NON ENERGY STORES CONNECTED")
+		return false
+	return true
 	
 func _unhandled_input(event):
 	if (event is InputEventMouseButton):

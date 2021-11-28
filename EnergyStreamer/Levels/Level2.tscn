@@ -11,14 +11,14 @@
 [node name="Level2" type="Node2D"]
 
 [node name="Tutorial" type="RichTextLabel" parent="."]
-margin_left = 128.0
-margin_top = 192.0
-margin_right = 624.0
-margin_bottom = 408.0
+margin_left = 104.0
+margin_top = 168.0
+margin_right = 616.0
+margin_bottom = 384.0
 rect_clip_content = false
 mouse_filter = 2
 theme = ExtResource( 7 )
-text = "Watch out! Not all objects react the same way when they receive energy.
+text = "Watch out! Not all objects react the same way when they receive energy. You can stop channeling at any moment.
 
 There are some things that can hurt you, be careful!"
 scroll_active = false
