@@ -21,6 +21,7 @@ var bgVol_low = -30
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	load_level(0)
+	#Engine.time_scale = 0.05
 	pass # Replace with function body.
 
 

@@ -43,7 +43,7 @@ func _physics_process(delta):
 	var left = false
 	var jumping = false
 	#Only allow movement when not streaming energy
-	if !($EnergyContoller.is_streaming()):
+	if !($EnergyController.is_streaming()):
 		right = Input.is_action_pressed("ui_right")
 		left = Input.is_action_pressed("ui_left")
 		jumping = Input.is_action_pressed("jump")
@@ -93,17 +93,7 @@ func _physics_process(delta):
 
 func _process(delta):
 	#animate the player character
-	var epsilon = 0.05
-	if velocity.x > epsilon:
-		$AnimatedSprite.flip_h = false
-		$CastingParticles.position.x = abs($CastingParticles.position.x)
-		$CastingParticles.process_material.direction.x = 1
-	if velocity.x < -epsilon:
-		$AnimatedSprite.flip_h = true
-		$CastingParticles.position.x = - abs($CastingParticles.position.x)
-		$CastingParticles.process_material.direction.x = - 1
-	#$Casting.visible = $EnergyContoller.is_streaming()
-	$CastingParticles.emitting = $EnergyContoller.is_active()
+	assign_animation()
 		
 
 func _on_DamageDetector_area_entered(area):
@@ -117,3 +107,33 @@ func _on_VisibilityNotifier2D_screen_exited():
 	if !$VisibilityNotifier2D.is_on_screen():
 		get_node("/root/Game").restart_level()
 	pass # Replace with function body.
+
+func assign_animation():
+	var epsilon = 0.05
+	if velocity.x > epsilon:
+		$AnimatedSprite.flip_h = false
+		$CastingParticles.position.x = abs($CastingParticles.position.x)
+		$CastingParticles.process_material.direction.x = 1
+	if velocity.x < -epsilon:
+		$AnimatedSprite.flip_h = true
+		$CastingParticles.position.x = - abs($CastingParticles.position.x)
+		$CastingParticles.process_material.direction.x = - 1
+	#$Casting.visible = $EnergyController.is_streaming()
+	$CastingParticles.emitting = $EnergyController.is_active()
+	if $EnergyController.is_streaming():
+		$Magic.play()
+	else:
+		$Magic.stop()
+	
+	var anim
+	if !is_on_floor():
+		#jumping animation
+		if velocity.y < 0:
+			anim = "Jump"
+		else:
+			anim = "Fall"
+	else:
+		anim = "Idle"
+	
+	if $AnimatedSprite.animation != anim:
+		$AnimatedSprite.animation = anim
