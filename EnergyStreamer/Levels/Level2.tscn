@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://TileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Goal.tscn" type="PackedScene" id=2]
@@ -6,8 +6,25 @@
 [ext_resource path="res://EnergyNodes/RisingPlatform.tscn" type="PackedScene" id=4]
 [ext_resource path="res://EnergyNodes/Fire.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Spikes.tscn" type="PackedScene" id=6]
+[ext_resource path="res://WizardTutorial.tres" type="Theme" id=7]
 
 [node name="Level2" type="Node2D"]
+
+[node name="Tutorial" type="RichTextLabel" parent="."]
+margin_left = 128.0
+margin_top = 192.0
+margin_right = 624.0
+margin_bottom = 408.0
+rect_clip_content = false
+mouse_filter = 2
+theme = ExtResource( 7 )
+text = "Watch out! Not all objects react the same way when they receive energy.
+
+There are some things that can hurt you, be careful!"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )

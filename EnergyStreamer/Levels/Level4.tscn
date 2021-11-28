@@ -1,12 +1,28 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://TileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Goal.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://EnergyNodes/RisingPlatform.tscn" type="PackedScene" id=4]
 [ext_resource path="res://EnergyNodes/Lava.tscn" type="PackedScene" id=5]
+[ext_resource path="res://WizardTutorial.tres" type="Theme" id=6]
 
 [node name="Level4" type="Node2D"]
+
+[node name="Tutorial" type="RichTextLabel" parent="."]
+margin_left = 88.0
+margin_top = 32.0
+margin_right = 600.0
+margin_bottom = 256.0
+rect_clip_content = false
+mouse_filter = 2
+theme = ExtResource( 6 )
+text = "You can drain the energy from lava to cool it down. This makes it safe to walk on. 
+
+Now you are ready to take on the challanges. Good luck!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
