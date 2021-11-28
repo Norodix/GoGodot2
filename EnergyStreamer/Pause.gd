@@ -18,6 +18,7 @@ func _ready():
 func _input(event):
 	if (event.is_action_pressed("ui_pause")):
 		togglePause()
+		$LevelLabel.text = "Current Level: " + str(GameNode.levelindex + 1)
 
 
 func _on_Resume_pressed():
@@ -45,4 +46,14 @@ func clearPause():
 func _on_Restart_pressed():
 	GameNode.restart_level()
 	clearPause()
+	pass # Replace with function body.
+
+
+func _on_HSlider_value_changed(value):
+	var busindex = AudioServer.get_bus_index("Master")
+	AudioServer.set_bus_volume_db(busindex, value)
+	if value == $HSlider.min_value:
+		AudioServer.set_bus_mute(busindex, true)
+	else:
+		AudioServer.set_bus_mute(busindex, false)
 	pass # Replace with function body.
