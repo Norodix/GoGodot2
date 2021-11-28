@@ -7,7 +7,7 @@
 [ext_resource path="res://Assets/Sprites/BlurryDot.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24, 300 )
+extents = Vector2( 24, 96 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32, 32 )
@@ -20,7 +20,7 @@ flag_disable_z = true
 direction = Vector3( 0, -1, 0 )
 spread = 0.0
 gravity = Vector3( 0, 0, 0 )
-initial_velocity = 300.0
+initial_velocity = 96.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 

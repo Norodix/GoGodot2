@@ -3,7 +3,7 @@ extends KinematicBody2D
 var max_speed = 600
 var acceleration_time = 0.2
 var deceleration_time = 0.1
-var jump_height = 64*2.1
+var jump_height = 64*2.2
 var gravity = 3000
 
 #calculated variables
@@ -77,7 +77,8 @@ func _physics_process(delta):
 			snap = Vector2.ZERO
 	
 	velocity += field_effect() * delta
-	
+	#Add a very small damping
+	velocity *= 0.995
 	velocity = move_and_slide_with_snap(velocity, snap, Vector2.UP)
 	
 
