@@ -36,6 +36,7 @@ func load_level(index: int):
 	$ActiveLevel.add_child(newlevel)
 
 func goal_reached(body):
+	$Sounds/BackgroundLoop/AnimationPlayer.play("RampDown")
 	var sfx = $Sounds/Success
 	get_tree().paused = true
 	canPause = false
@@ -46,9 +47,11 @@ func goal_reached(body):
 	levelindex += 1
 	levelindex = levelindex % levels.size()
 	load_level(levelindex)
+	$Sounds/BackgroundLoop/AnimationPlayer.play("RampUp")
 	pass
 	
 func failure():
+	$Sounds/BackgroundLoop/AnimationPlayer.play("RampDown")
 	var sfx = $Sounds/Failure
 	get_tree().paused = true
 	canPause = false
@@ -57,9 +60,9 @@ func failure():
 	get_tree().paused = false
 	canPause = true
 	restart_level()
+	$Sounds/BackgroundLoop/AnimationPlayer.play("RampUp")
 	pass
 
 func restart_level():
 	load_level(levelindex)
 	pass
-
