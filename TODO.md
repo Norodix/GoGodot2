@@ -17,9 +17,9 @@
         - [x] Rising platform
         - [x] Horizontally bouncing/moving platform/springing
         - [x] Lava
-        - [ ] ~~Lamp~~
-        - [ ] ~~Negative energy/direct energy out from water to freeze it~~
-        - [ ] ~~Vibrating bouncy platform~~
+        - [x] ~~Lamp~~
+        - [x] ~~Negative energy/direct energy out from water to freeze it~~
+        - [x] ~~Vibrating bouncy platform~~
 - [x] Create connection handler
     - [x] Detect energy nodes based on collision layer and energy property
     - [x] Handle unhandled inputs in all scenes
@@ -28,11 +28,11 @@
 - [x] Implement or import character controller
 - [x] Implement tilemap for levels https://kenney.nl/assets/abstract-platformer
 - [ ] Design good levels
-- [ ] Sound design
+- [x] Sound design
 - [ ] Implement Level selector, menu and level end target, pause
     - [ ] Main menu
-        - [ ] Volume control
-        - [ ] Credits
+        - [-] Volume control
+        - [x] ~~Credits~~
     - [x] Pause menu
         - [x] resume
         - [x] Exit
@@ -96,7 +96,7 @@ The inspiration character is a lute player, if we could sneak a little bit of lu
     - [x] Jumping -> leaves "exploding"
     - [x] Falling
     - [x] Magic / casting
-- [ ] Fire
+- [x] Fire
 - [x] Lava and stone
 - [x] Cauldron bubbles (optional)
 - [ ] Background
@@ -117,5 +117,6 @@ ffmpeg -pattern_type glob -i "leaf*.png" -filter_complex "tile=2x1" TiledLeaf.pn
 - [ ] Menu with music
 - [x] Outro level
 - [x] Implement jumping animation
-- [ ] Background
+- [ ] Background indoors
+- [x] Background outdoors
 - [ ] Icons, splash screen
