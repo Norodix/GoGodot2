@@ -14,8 +14,14 @@ func _ready():
 
 
 func _process(delta):
-	var s = max(E/maxE, 0.1) #Dont let it disappear
+	var s = max(E/maxE, 0.01)
 	$AnimatedSprite.scale = Vector2(s, s)
 	$AnimatedSprite.position.y = (1-s) * 32
 	$AudioStreamPlayer.volume_db = log(E / maxE) * 20 + sfx_db
+	
+	var burtout = (s < 0.2)
+	$Particles2D.emitting = burtout
+	$AnimatedSprite/DamageZone.monitoring = !burtout
+	$AnimatedSprite/DamageZone.monitorable = !burtout
+	
 	pass

@@ -9,7 +9,7 @@
         - [x] Cauldron boiling
         - [x] Cauldron steaming
         - [x] Lava popping
-        - [ ] Fire smoking when put out
+        - [x] Fire smoking when put out
     - [x] Visualize current energy level on scale
     - [x] Nodes
         - [x] Cauldron
