@@ -2,7 +2,7 @@
 
 ## Energy Streamer
     
-- [ ] Create energy nodes
+- [x] Create energy nodes
     - [x] Common property energy
     - [x] Custom behaviour, fire size, boiling stream etc.
     - [ ] Create animations
@@ -29,9 +29,9 @@
 - [x] Implement tilemap for levels https://kenney.nl/assets/abstract-platformer
 - [ ] Design good levels
 - [x] Sound design
-- [ ] Implement Level selector, menu and level end target, pause
-    - [ ] Main menu
-        - [-] Volume control
+- [x] Implement Level selector, menu and level end target, pause
+    - [x] Main menu
+        - [x] Volume control
         - [x] ~~Credits~~
     - [x] Pause menu
         - [x] resume
