@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/background_hills_softer.png-52129bc758643f674a4cde0daac20efe.stex"
+
+[node name="Bg_indoors" type="Sprite"]
+modulate = Color( 0.376471, 0.376471, 0.376471, 1 )
+z_index = -200
+texture = SubResource( 1 )
+centered = false

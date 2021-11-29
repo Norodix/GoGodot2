@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://TileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Goal.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Spikes.tscn" type="PackedScene" id=4]
 [ext_resource path="res://EnergyNodes/Water.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Levels/slowTransfer.gd" type="Script" id=6]
+[ext_resource path="res://Bg_indoors.tscn" type="PackedScene" id=7]
 
 [node name="Level9" type="Node2D"]
 script = ExtResource( 6 )
@@ -88,3 +89,5 @@ rotation = -3.14159
 
 [node name="Spikes5" parent="SpikeTrapTop" instance=ExtResource( 4 )]
 rotation = -3.14159
+
+[node name="Bg_indoors" parent="." instance=ExtResource( 7 )]

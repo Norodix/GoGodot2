@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://TileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Goal.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://EnergyNodes/Fire.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Spikes.tscn" type="PackedScene" id=6]
 [ext_resource path="res://WizardTutorial.tres" type="Theme" id=7]
+[ext_resource path="res://Bg_indoors.tscn" type="PackedScene" id=8]
 
 [node name="Level2" type="Node2D"]
 
@@ -58,3 +59,5 @@ z_index = -1
 [node name="Spikes3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 512, 120 )
 z_index = -1
+
+[node name="Bg_indoors" parent="." instance=ExtResource( 8 )]

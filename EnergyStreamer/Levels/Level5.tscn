@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://TileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Goal.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://EnergyNodes/RisingPlatform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Bg_indoors.tscn" type="PackedScene" id=5]
 [ext_resource path="res://EnergyNodes/Fire.tscn" type="PackedScene" id=6]
 
 [node name="Level5" type="Node2D"]
@@ -27,3 +28,5 @@ E = 0.0
 position = Vector2( 416, 464 )
 E = 1.0
 Rising = 192
+
+[node name="Bg_indoors" parent="." instance=ExtResource( 5 )]
