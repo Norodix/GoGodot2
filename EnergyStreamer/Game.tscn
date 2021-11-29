@@ -193,4 +193,3 @@ visibility_mode = 1
 [connection signal="pressed" from="Pause/Pause/VBoxContainer/Restart" to="Pause/Pause" method="_on_Restart_pressed"]
 [connection signal="pressed" from="Pause/Pause/VBoxContainer/Menu" to="Pause/Pause" method="_on_Menu_pressed"]
 [connection signal="pressed" from="Pause/Pause/VBoxContainer/Exit" to="Pause/Pause" method="_on_Exit_pressed"]
-[connection signal="value_changed" from="Pause/Pause/VolumeSlider" to="Pause/Pause" method="_on_VolumeSlider_value_changed"]

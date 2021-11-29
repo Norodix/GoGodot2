@@ -54,7 +54,7 @@ func _physics_process(delta):
 	
 	# if just touched ground make leaf explosion
 	if (!ground) && is_on_floor() && !$Leaves.emitting:
-		print("dropped")
+		#print("dropped")
 		$Leaves.restart()
 		$Leaves.emitting = true
 		$LeafDrop.play()

@@ -115,9 +115,9 @@ convert Icon.png -define icon:auto-resize=256,128,64,48,32,16 Icon.ico
 
 ## Left to do
 - [x] Walking animation
-- [ ] Menu with music
+- [x] Menu with music
 - [x] Outro level
 - [x] Implement jumping animation
 - [ ] Background indoors
 - [x] Background outdoors
-- [ ] Icons, splash screen
+- [x] Icons, splash screen

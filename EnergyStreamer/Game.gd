@@ -35,7 +35,7 @@ func load_level(index: int):
 	pass
 	
 	levelindex = index
-	print("load level ", levelindex)
+	#print("load level ", levelindex)
 	var newlevel_resource = load(levels[index])
 	var newlevel = newlevel_resource.instance()
 	$ActiveLevel.add_child(newlevel)
@@ -50,7 +50,11 @@ func goal_reached(body):
 	get_tree().paused = false
 	canPause = true
 	levelindex += 1
-	levelindex = levelindex % levels.size()
+	if (levelindex == levels.size()):
+		#end of game, go back to main menu
+		levelindex = 0
+		get_tree().change_scene("res://MainMenu.tscn")
+		return
 	load_level(levelindex)
 	bgMusicFadeIn()
 	pass
