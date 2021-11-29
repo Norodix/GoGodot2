@@ -12,6 +12,7 @@ config_version=4
 
 config/name="Energy Streamer"
 run/main_scene="res://Game.tscn"
+boot_splash/image="res://Assets/Vfx/ggj2-splash.png"
 config/icon="res://icon.png"
 
 [display]
@@ -61,6 +62,10 @@ ui_pause={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":11,"pressure":0.0,"pressed":false,"script":null)
  ]
 }
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [layer_names]
 

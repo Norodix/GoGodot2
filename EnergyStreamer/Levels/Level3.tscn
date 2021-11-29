@@ -10,14 +10,15 @@
 [node name="Level3" type="Node2D"]
 
 [node name="Tutorial" type="RichTextLabel" parent="."]
-margin_left = 96.0
-margin_top = 40.0
-margin_right = 576.0
+margin_left = 72.0
+margin_top = 16.0
+margin_right = 608.0
 margin_bottom = 320.0
 rect_clip_content = false
 mouse_filter = 2
 theme = ExtResource( 6 )
-text = "You can boil water to create steam that you can ride up. The more energy the water has the higher and stronger it becomes."
+text = "You can boil water to create steam that you can ride up. The more energy the water has the higher and stronger it becomes.
+Some cauldrons can even levitate you."
 __meta__ = {
 "_edit_use_anchors_": false
 }

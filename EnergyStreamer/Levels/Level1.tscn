@@ -10,18 +10,30 @@
 [node name="Level1" type="Node2D"]
 
 [node name="Tutorial" type="RichTextLabel" parent="."]
-margin_left = 89.0
-margin_top = 24.0
-margin_right = 680.0
-margin_bottom = 408.0
+margin_left = 72.0
+margin_top = 8.0
+margin_right = 960.0
+margin_bottom = 144.0
 rect_clip_content = false
 mouse_filter = 2
 theme = ExtResource( 6 )
 text = "In this game you are a magician who can manipulate the energy of objects surrounding him. 
+You can channel the energy of the fire to lift up the platform and reach your goal."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-You can channel the energy of the fire to lift up the platform and reach your goal.
-
-Drag from the fire to the platform to perform your magic. You cannot move while channeling the energy."
+[node name="Tutorial2" type="RichTextLabel" parent="."]
+margin_left = 72.0
+margin_top = 143.0
+margin_right = 696.0
+margin_bottom = 527.0
+rect_clip_content = false
+mouse_filter = 2
+theme = ExtResource( 6 )
+text = "Drag from the fire to the platform to perform your magic.
+You cannot move while channeling the energy."
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false

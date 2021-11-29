@@ -9,7 +9,7 @@
         - [x] Cauldron boiling
         - [x] Cauldron steaming
         - [x] Lava popping
-        - [ ] Fire smoking
+        - [ ] Fire smoking when put out
     - [x] Visualize current energy level on scale
     - [x] Nodes
         - [x] Cauldron
@@ -69,7 +69,7 @@
 - [ ] Stuck in a "well" can get in, cant get out
 - [x] Raise platform just enough so you can jump and reach the top as well
 - [x] Platform would move too high into danger, must stop manually
-- [ ] Combine cauldron uplift with moving platform
+- [ ] Combine cauldron uplift with moving platform -> spiky platform
 - [x] Array of cauldrons and float through it
 - [x] Drop down but it needs to be slow so you can move sideways into safety from spike on bottom
 
@@ -90,9 +90,9 @@
 The inspiration character is a lute player, if we could sneak a little bit of lute sound in somewhere that would be a cool small addition
 
 ## Animations and Assets
-- [ ] Character
+- [x] Character
     - [x] Idle
-    - [ ] Walking
+    - [x] Walking
     - [x] Jumping -> leaves "exploding"
     - [x] Falling
     - [x] Magic / casting
@@ -106,15 +106,16 @@ The inspiration character is a lute player, if we could sneak a little bit of lu
 ## Other/Optional
 
 - [x] Automate itch uploads
-- [ ] Mobile controls, animation tests etc
+- [x] Mobile controls, animation tests etc
 
 ## Notes
 ffmpeg -pattern_type glob -i "leaf*.png" -filter_complex "tile=2x1" TiledLeaf.png
 
 
 ## Left to do
-- [ ] Walking animation
+- [x] Walking animation
 - [ ] Menu with music
 - [x] Outro level
 - [x] Implement jumping animation
 - [ ] Background
+- [ ] Icons, splash screen
