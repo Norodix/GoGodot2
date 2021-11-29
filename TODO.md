@@ -110,6 +110,7 @@ The inspiration character is a lute player, if we could sneak a little bit of lu
 
 ## Notes
 ffmpeg -pattern_type glob -i "leaf*.png" -filter_complex "tile=2x1" TiledLeaf.png
+convert Icon.png -define icon:auto-resize=256,128,64,48,32,16 Icon.ico
 
 
 ## Left to do
