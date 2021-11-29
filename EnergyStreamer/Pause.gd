@@ -50,12 +50,12 @@ func _on_Restart_pressed():
 	clearPause()
 	pass # Replace with function body.
 
-
-func _on_HSlider_value_changed(value):
+func _on_VolumeSlider_value_changed(value):
 	var busindex = AudioServer.get_bus_index("Master")
 	AudioServer.set_bus_volume_db(busindex, value)
-	if value == $HSlider.min_value:
+	if value == $VolumeSlider.min_value:
 		AudioServer.set_bus_mute(busindex, true)
 	else:
 		AudioServer.set_bus_mute(busindex, false)
+	pass # Replace with function body.
 	pass # Replace with function body.
