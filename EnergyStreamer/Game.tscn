@@ -70,26 +70,33 @@ margin_top = 160.0
 margin_right = 44.0
 margin_bottom = 294.0
 mouse_filter = 2
+custom_constants/separation = 12
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Resume" type="Button" parent="Pause/Pause/VBoxContainer"]
-margin_right = 97.0
-margin_bottom = 51.0
+margin_right = 88.0
+margin_bottom = 46.0
 text = "Resume"
 
 [node name="Restart" type="Button" parent="Pause/Pause/VBoxContainer"]
-margin_top = 55.0
-margin_right = 97.0
-margin_bottom = 106.0
+margin_top = 58.0
+margin_right = 88.0
+margin_bottom = 104.0
 text = "Restart"
 
+[node name="Menu" type="Button" parent="Pause/Pause/VBoxContainer"]
+margin_top = 116.0
+margin_right = 88.0
+margin_bottom = 162.0
+text = "Menu"
+
 [node name="Exit" type="Button" parent="Pause/Pause/VBoxContainer"]
-margin_top = 110.0
-margin_right = 97.0
-margin_bottom = 161.0
+margin_top = 174.0
+margin_right = 88.0
+margin_bottom = 220.0
 text = "Exit"
 
 [node name="HBoxContainerLevels" type="HBoxContainer" parent="Pause/Pause"]
@@ -184,5 +191,6 @@ visibility_mode = 1
 
 [connection signal="pressed" from="Pause/Pause/VBoxContainer/Resume" to="Pause/Pause" method="_on_Resume_pressed"]
 [connection signal="pressed" from="Pause/Pause/VBoxContainer/Restart" to="Pause/Pause" method="_on_Restart_pressed"]
+[connection signal="pressed" from="Pause/Pause/VBoxContainer/Menu" to="Pause/Pause" method="_on_Menu_pressed"]
 [connection signal="pressed" from="Pause/Pause/VBoxContainer/Exit" to="Pause/Pause" method="_on_Exit_pressed"]
 [connection signal="value_changed" from="Pause/Pause/VolumeSlider" to="Pause/Pause" method="_on_VolumeSlider_value_changed"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Sprites/background_hills.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Music/Orange.ogg" type="AudioStream" id=2]
 [ext_resource path="res://WizardEdited.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://MainMenu.gd" type="Script" id=4]
 
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.509804, 0.309804, 0.160784, 1 )
@@ -95,6 +96,7 @@ HSlider/styles/grabber_area_highlight = SubResource( 5 )
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -114,6 +116,7 @@ autoplay = true
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -125,3 +128,5 @@ margin_right = 839.0
 margin_bottom = 375.0
 theme = SubResource( 8 )
 text = "Energy Streamer"
+
+[connection signal="gui_input" from="." to="." method="_on_MainMenu_gui_input"]

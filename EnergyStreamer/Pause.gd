@@ -59,3 +59,12 @@ func _on_VolumeSlider_value_changed(value):
 		AudioServer.set_bus_mute(busindex, false)
 	pass # Replace with function body.
 	pass # Replace with function body.
+
+
+func _on_MainMenu_pressed():
+	pass # Replace with function body.
+
+
+func _on_Menu_pressed():
+	get_tree().change_scene("res://MainMenu.tscn")
+	pass # Replace with function body.
