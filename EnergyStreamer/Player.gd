@@ -134,7 +134,10 @@ func assign_animation():
 		else:
 			anim = "Fall"
 	else:
-		anim = "Idle"
+		if (abs(velocity.x) < 10) :
+			anim = "Idle"
+		else:
+			anim = "Walk"
 	
 	if $AnimatedSprite.animation != anim:
 		$AnimatedSprite.animation = anim
