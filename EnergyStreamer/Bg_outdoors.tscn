@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Sprites/background_hills_softer.png" type="Texture" id=1]
+
+[node name="Bg_outdoors" type="Sprite"]
+z_index = -200
+texture = ExtResource( 1 )
+centered = false
