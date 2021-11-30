@@ -14,82 +14,78 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 14.5, 44 )
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="CapsuleShape2D" id=2]
 radius = 16.0
 height = 56.0
 
-[sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 8 )
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 8 )
-region = Rect2( 64, 0, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=16]
-atlas = ExtResource( 8 )
-region = Rect2( 128, 0, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 4 )
 region = Rect2( 64, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=17]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 8 )
 region = Rect2( 192, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=18]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 8 )
 region = Rect2( 256, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=19]
-flags = 4
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 10 )
 region = Rect2( 0, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=20]
-flags = 4
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 10 )
 region = Rect2( 64, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=21]
-flags = 4
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 10 )
 region = Rect2( 128, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=22]
-flags = 4
+[sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 10 )
 region = Rect2( 192, 0, 64, 64 )
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 8 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 8 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=14]
 animations = [ {
-"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
-"loop": false,
-"name": "Jump",
-"speed": 30.0
-}, {
-"frames": [ SubResource( 4 ), SubResource( 5 ) ],
+"frames": [ SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 3.0
 }, {
-"frames": [ SubResource( 17 ), SubResource( 18 ) ],
+"frames": [ SubResource( 5 ), SubResource( 6 ) ],
 "loop": false,
 "name": "Fall",
 "speed": 6.0
 }, {
-"frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
 "loop": true,
 "name": "Walk",
 "speed": 12.0
+}, {
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": false,
+"name": "Jump",
+"speed": 30.0
 } ]
 
-[sub_resource type="Shader" id=7]
+[sub_resource type="Shader" id=15]
 code = "shader_type canvas_item;
 uniform vec4 color : hint_color;
 uniform float speed = 0.2;
@@ -100,19 +96,19 @@ void fragment(){
 	COLOR.a = texture(TEXTURE, UV).a;
 }"
 
-[sub_resource type="ShaderMaterial" id=8]
-shader = SubResource( 7 )
+[sub_resource type="ShaderMaterial" id=16]
+shader = SubResource( 15 )
 shader_param/color = Color( 0.45098, 0.117647, 0, 1 )
 shader_param/speed = 12.0
 shader_param/amplitude = 1.0
 
-[sub_resource type="Curve" id=9]
+[sub_resource type="Curve" id=17]
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.102273 ), -2.3, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=10]
-curve = SubResource( 9 )
+[sub_resource type="CurveTexture" id=18]
+curve = SubResource( 17 )
 
-[sub_resource type="ParticlesMaterial" id=11]
+[sub_resource type="ParticlesMaterial" id=19]
 flag_disable_z = true
 direction = Vector3( 1, -1, 0 )
 spread = 30.0
@@ -121,15 +117,15 @@ initial_velocity = 60.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 scale = 0.3
-scale_curve = SubResource( 10 )
+scale_curve = SubResource( 18 )
 
-[sub_resource type="CanvasItemMaterial" id=12]
+[sub_resource type="CanvasItemMaterial" id=20]
 particles_animation = true
 particles_anim_h_frames = 2
 particles_anim_v_frames = 1
 particles_anim_loop = false
 
-[sub_resource type="ParticlesMaterial" id=13]
+[sub_resource type="ParticlesMaterial" id=21]
 emission_shape = 2
 emission_box_extents = Vector3( 10, 1, 1 )
 flag_disable_z = true
@@ -171,7 +167,7 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FieldDetector"]
 position = Vector2( 1, -44 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="DamageDetector" type="Area2D" parent="."]
 collision_layer = 0
@@ -179,13 +175,14 @@ collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageDetector"]
 position = Vector2( 1, -44 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -45 )
 scale = Vector2( 1.55, 1.55 )
-frames = SubResource( 6 )
+frames = SubResource( 14 )
 animation = "Walk"
+frame = 1
 playing = true
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
@@ -195,7 +192,7 @@ scale = Vector2( 3.6, 4.8 )
 
 [node name="Casting" type="Sprite" parent="."]
 visible = false
-material = SubResource( 8 )
+material = SubResource( 16 )
 position = Vector2( 16, -42 )
 texture = ExtResource( 5 )
 
@@ -206,18 +203,18 @@ amount = 12
 lifetime = 0.8
 visibility_rect = Rect2( -100, -100, 400, 200 )
 local_coords = false
-process_material = SubResource( 11 )
+process_material = SubResource( 19 )
 texture = ExtResource( 5 )
 
 [node name="Leaves" type="Particles2D" parent="."]
-material = SubResource( 12 )
+material = SubResource( 20 )
 z_index = -30
 emitting = false
 lifetime = 2.1
 one_shot = true
 explosiveness = 1.0
 local_coords = false
-process_material = SubResource( 13 )
+process_material = SubResource( 21 )
 texture = ExtResource( 6 )
 
 [node name="LeafDrop" type="AudioStreamPlayer" parent="."]

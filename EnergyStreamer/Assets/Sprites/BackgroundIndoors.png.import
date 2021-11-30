@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/character_walk.png-5fd7d85a59914f2f81a83c3f46c577db.stex"
+path="res://.import/BackgroundIndoors.png-953b91863dfb64dc4c98e8cf4167eea9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/character_walk.png"
-dest_files=[ "res://.import/character_walk.png-5fd7d85a59914f2f81a83c3f46c577db.stex" ]
+source_file="res://Assets/Sprites/BackgroundIndoors.png"
+dest_files=[ "res://.import/BackgroundIndoors.png-953b91863dfb64dc4c98e8cf4167eea9.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

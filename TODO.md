@@ -72,6 +72,7 @@
 - [ ] Combine cauldron uplift with moving platform -> spiky platform
 - [x] Array of cauldrons and float through it
 - [x] Drop down but it needs to be slow so you can move sideways into safety from spike on bottom
+- [ ] Start with character floating on steam and have to jump between cauldrons above spikes -> maybe only 1 unit of energy
 
 ## Sound design
 - Background music
@@ -121,3 +122,5 @@ convert Icon.png -define icon:auto-resize=256,128,64,48,32,16 Icon.ico
 - [ ] Background indoors
 - [x] Background outdoors
 - [x] Icons, splash screen
+- [ ] Audio in web build bug
+- [ ] Focus in web build bug

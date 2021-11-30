@@ -10,4 +10,3 @@ glow_enabled = true
 glow_strength = 0.57
 glow_blend_mode = 0
 glow_bicubic_upscale = true
-glow_high_quality = true
