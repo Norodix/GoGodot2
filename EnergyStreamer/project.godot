@@ -16,6 +16,10 @@ boot_splash/image="res://Assets/Vfx/ggj2-splash.png"
 config/icon="res://Assets/Vfx/Icon.png"
 config/windows_native_icon="res://Assets/Vfx/Icon.ico"
 
+[audio]
+
+output_latency.web=60
+
 [display]
 
 window/stretch/mode="viewport"
