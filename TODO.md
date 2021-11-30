@@ -5,7 +5,7 @@
 - [x] Create energy nodes
     - [x] Common property energy
     - [x] Custom behaviour, fire size, boiling stream etc.
-    - [ ] Create animations
+    - [x] Create animations
         - [x] Cauldron boiling
         - [x] Cauldron steaming
         - [x] Lava popping
@@ -62,9 +62,9 @@
 - [x] Vertically narrow corridor, many horizontal oscillators, have to set one by one
 - [x] Cauldron lift up/ basic platform lift up
 - [ ] Need to find place to dump energy instead of sourcing it
-- [ ] Oscillating platform opens up horizontal passage / drop down
+- [x] Oscillating platform opens up horizontal passage / drop down
 - [x] ~~Source can only be one that the player is touching?~~
-- [ ] Moving platform combined with uplift, cancelling each other
+- [x] Moving platform combined with uplift, cancelling each other
 - [x] Jumping on the limit, have to preserve upwart momentum with draft
 - [ ] Stuck in a "well" can get in, cant get out
 - [x] Raise platform just enough so you can jump and reach the top as well
@@ -100,7 +100,7 @@ The inspiration character is a lute player, if we could sneak a little bit of lu
 - [x] Fire
 - [x] Lava and stone
 - [x] Cauldron bubbles (optional)
-- [ ] Background
+- [x] Background
 
 
 
@@ -119,8 +119,8 @@ convert Icon.png -define icon:auto-resize=256,128,64,48,32,16 Icon.ico
 - [x] Menu with music
 - [x] Outro level
 - [x] Implement jumping animation
-- [ ] Background indoors
+- [x] Background indoors
 - [x] Background outdoors
 - [x] Icons, splash screen
-- [ ] Audio in web build bug
-- [ ] Focus in web build bug
+- [x] Audio in web build bug
+- [x] Focus in web build bug

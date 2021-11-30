@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://TileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Goal.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://EnergyNodes/Fire.tscn" type="PackedScene" id=5]
 [ext_resource path="res://WizardTutorial.tres" type="Theme" id=6]
 [ext_resource path="res://Bg_outdoors.tscn" type="PackedScene" id=7]
+[ext_resource path="res://TouchControls.tscn" type="PackedScene" id=8]
 
 [node name="Level1" type="Node2D"]
 
@@ -58,3 +59,7 @@ position = Vector2( 800, 544 )
 position = Vector2( 544, 464 )
 
 [node name="Bg_outdoors" parent="." instance=ExtResource( 7 )]
+
+[node name="TouchControls" parent="." instance=ExtResource( 8 )]
+modulate = Color( 0.686275, 0, 0, 1 )
+z_index = 20
