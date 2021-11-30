@@ -103,7 +103,7 @@ func _on_DamageDetector_area_entered(area):
 
 func _on_VisibilityNotifier2D_screen_exited():
 	#wait one second to buffer, if still outside reset
-	yield(get_tree().create_timer(1.0), "timeout")
+	yield(get_tree().create_timer(5.0), "timeout")
 	if !$VisibilityNotifier2D.is_on_screen():
 		get_node("/root/Game").restart_level()
 	pass # Replace with function body.

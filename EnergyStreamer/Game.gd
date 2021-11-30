@@ -12,8 +12,8 @@ var levels = [
 	"res://Levels/Level9.tscn",
 	"res://Levels/Level10.tscn",
 	"res://Levels/john1.tscn",
-	"res://Levels/john2.tscn",
-	"res://Levels/LevelEnd.tscn"
+	"res://Levels/LevelEnd.tscn",
+	"res://Levels/john2.tscn"
 ]
 var levelindex = 0
 var canPause = true

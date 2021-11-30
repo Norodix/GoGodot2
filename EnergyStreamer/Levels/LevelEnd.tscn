@@ -33,7 +33,20 @@ text = "Thank you for playing!
 
 Development:   Norodix
 Music and sfx:   Chris Toro
-Graphics:   Quelaan"
+Graphics:   Peceli Timea Monika"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bonus" type="RichTextLabel" parent="."]
+margin_left = 800.0
+margin_top = 448.0
+margin_right = 1344.0
+margin_bottom = 704.0
+rect_clip_content = false
+mouse_filter = 2
+theme = ExtResource( 4 )
+text = "Bonus levels!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
