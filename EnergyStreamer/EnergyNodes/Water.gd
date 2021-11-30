@@ -2,7 +2,7 @@
 extends Area2D
 
 
-export(float, 0, 1) var E = 1 #Energy
+export(float, 0, 10) var E = 1 #Energy
 export(float, 1, 10) var maxE = 1
 #Uplift field effect added to acceleration as a vector at unit E
 export(int, 0, 6000) var Uplift = 2000

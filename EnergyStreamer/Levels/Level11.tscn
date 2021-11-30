@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://TileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://Goal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bg_outdoors.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Spikes.tscn" type="PackedScene" id=5]
+[ext_resource path="res://EnergyNodes/Water.tscn" type="PackedScene" id=6]
+
+[node name="Level0" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( -65537, 5, 0, -131072, 5, 2, -131057, 5, 0, -131056, 5, 2, -1, 5, 65536, -65536, 5, 65538, -65521, 5, 65536, -65520, 5, 65538, 65535, 5, 65536, 0, 5, 65538, 15, 5, 65536, 16, 5, 65538, 131071, 5, 65536, 65536, 5, 65538, 65551, 5, 65536, 65552, 5, 65538, 196607, 5, 65536, 131072, 5, 65538, 131087, 5, 65536, 131088, 5, 65538, 262143, 5, 65536, 196608, 5, 65538, 196623, 5, 65536, 196624, 5, 65538, 327679, 5, 65536, 262144, 5, 65538, 262159, 5, 65536, 262160, 5, 65538, 393215, 5, 65536, 327680, 5, 65538, 327695, 5, 65536, 327696, 5, 65538, 458751, 5, 65536, 393216, 5, 65538, 393231, 5, 65536, 393232, 5, 65538, 524287, 5, 65536, 458752, 5, 65538, 458767, 5, 65536, 458768, 5, 65538, 589823, 5, 65536, 524288, 5, 65538, 524303, 5, 65536, 524304, 5, 65538, 655359, 5, 65536, 589824, 5, 196608, 589825, 5, 1, 589826, 5, 1, 589827, 5, 1, 589828, 5, 1, 589829, 5, 1, 589830, 5, 1, 589831, 5, 1, 589832, 5, 1, 589833, 5, 1, 589834, 5, 1, 589835, 5, 1, 589836, 5, 1, 589837, 5, 1, 589838, 5, 1, 589839, 5, 196609, 589840, 5, 65538, 720895, 5, 131072, 655360, 5, 131073, 655361, 5, 131073, 655362, 5, 131073, 655363, 5, 131073, 655364, 5, 131073, 655365, 5, 131073, 655366, 5, 131073, 655367, 5, 131073, 655368, 5, 131073, 655369, 5, 131073, 655370, 5, 131073, 655371, 5, 131073, 655372, 5, 131073, 655373, 5, 131073, 655374, 5, 131073, 655375, 5, 131073, 655376, 5, 131074 )
+
+[node name="Goal" parent="." instance=ExtResource( 2 )]
+position = Vector2( 864, 544 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 96, 192 )
+
+[node name="Bg_indoors" parent="." instance=ExtResource( 4 )]
+
+[node name="SpikeTrap" type="Node2D" parent="."]
+position = Vector2( 128, 584 )
+z_index = -13
+
+[node name="Spikes" parent="SpikeTrap" instance=ExtResource( 5 )]
+rotation = -3.14159
+
+[node name="Spikes2" parent="SpikeTrap" instance=ExtResource( 5 )]
+position = Vector2( 64, 0 )
+rotation = -3.14159
+
+[node name="Spikes3" parent="SpikeTrap" instance=ExtResource( 5 )]
+position = Vector2( 128, 0 )
+rotation = -3.14159
+
+[node name="Spikes4" parent="SpikeTrap" instance=ExtResource( 5 )]
+position = Vector2( 192, 0 )
+rotation = -3.14159
+
+[node name="Spikes5" parent="SpikeTrap" instance=ExtResource( 5 )]
+position = Vector2( 256, 0 )
+rotation = -3.14159
+
+[node name="Spikes6" parent="SpikeTrap" instance=ExtResource( 5 )]
+position = Vector2( 320, 0 )
+rotation = -3.14159
+
+[node name="Spikes7" parent="SpikeTrap" instance=ExtResource( 5 )]
+position = Vector2( 384, 0 )
+rotation = -3.14159
+
+[node name="Spikes8" parent="SpikeTrap" instance=ExtResource( 5 )]
+position = Vector2( 448, 0 )
+rotation = -3.14159
+
+[node name="Spikes9" parent="SpikeTrap" instance=ExtResource( 5 )]
+position = Vector2( 512, 0 )
+rotation = -3.14159
+
+[node name="Spikes10" parent="SpikeTrap" instance=ExtResource( 5 )]
+position = Vector2( 576, 0 )
+rotation = -3.14159
+
+[node name="Water" parent="." instance=ExtResource( 6 )]
+position = Vector2( 96, 544 )
+E = 1.8
+maxE = 1.8
+Uplift = 6000
+Height = 192
+
+[node name="Water2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 288, 544 )
+E = 0.0
+maxE = 1.8
+Uplift = 6000
+Height = 192
+
+[node name="Water3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 480, 544 )
+E = 0.0
+maxE = 1.8
+Uplift = 6000
+Height = 192
