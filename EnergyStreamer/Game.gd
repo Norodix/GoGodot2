@@ -11,6 +11,8 @@ var levels = [
 	"res://Levels/Level8.tscn",
 	"res://Levels/Level9.tscn",
 	"res://Levels/Level10.tscn",
+	"res://Levels/john1.tscn",
+	"res://Levels/john2.tscn",
 	"res://Levels/LevelEnd.tscn"
 ]
 var levelindex = 0

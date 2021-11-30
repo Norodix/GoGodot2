@@ -182,7 +182,7 @@ position = Vector2( 0, -45 )
 scale = Vector2( 1.55, 1.55 )
 frames = SubResource( 14 )
 animation = "Walk"
-frame = 1
+frame = 2
 playing = true
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
