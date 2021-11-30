@@ -29,10 +29,13 @@ func field_effect():
 	var effect = Vector2.ZERO
 	var fields = $FieldDetector.get_overlapping_areas()
 	
+	if fields.size() == 0:
+		return Vector2.ZERO
+	
 	for field in fields:
 		effect += field.FieldEffect
 	
-	return effect
+	return effect / fields.size()
 	
 func take_damage():
 	get_node("/root/Game").failure()
